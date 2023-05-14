@@ -1,0 +1,26 @@
+{
+  "name": "to_do_list-v2.2-12mths-web_dev",
+  "version": "1.0.0",
+  "description": "## To do list App ### Own design and code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pittyh6/to_do_list-v2.2-12mths-web_dev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pittyh6/to_do_list-v2.2-12mths-web_dev/issues"
+  },
+  "homepage": "https://github.com/pittyh6/to_do_list-v2.2-12mths-web_dev#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
