@@ -33,7 +33,7 @@
  * 🎯 Certification Project - Survey Form [link](https://github.com/pittyh6/freeCodeCamp-responsive_web_design-3-12Mths-WebDevStudy-2022-2023/tree/master/survey_form) 🥇 -->
 
 ## Online Page:
-https://pittyh6.github.io/to_do_list-12mths-web_dev/
+
  ## Project + Result 
 * prototype: https://www.figma.com/file/W4DjpEHYoMOuGiuIN27EDs/ToDoList?node-id=0%3A1&t=4iM9VxWkiv0pakER-1
 
