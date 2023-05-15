@@ -15,7 +15,7 @@ app.use(express.static('public'))
 
 //Define routes
 app.get('/',function(req,res){
-    res.sendFile(__dirname + 'index.html')
+    res.sendFile(__dirname + './views/index')
 })
 
 //start server
