@@ -5,8 +5,8 @@ const app = express();
 const bodyParser = require('body-parser');
 
 //set the view Engine to EJS
-app.set('views','./views')
-app.set('view engine', 'ejs')
+app.set('views', './views');
+app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended:true}))
 
