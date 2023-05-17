@@ -1,3 +1,7 @@
 body{
-    background: var(--bg-color);
+    /* background diagonal two color style  */
+    background: linear-gradient(to right bottom, var(--bg-color) 50%, var(--light-red)55%);/*55% makes it blur*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
 }
