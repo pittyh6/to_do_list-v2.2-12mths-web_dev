@@ -1,3 +1,12 @@
-h1{
-    color: red;
+.ball-animation{
+    position: relative;
+    z-index: -1;
+    width: 50%;
+    top: -65px;
+}
+
+@media (min-width: 768px){
+    .ball-animation{
+        top: -100px;
+    }
 }
