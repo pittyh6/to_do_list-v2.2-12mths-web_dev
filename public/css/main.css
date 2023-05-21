@@ -11,3 +11,11 @@
     margin: 0 auto;
     text-align: center;
 }
+
+input{
+  border-style: none;
+  background-color: transparent;
+}
+
+
+/*NavBar*/
