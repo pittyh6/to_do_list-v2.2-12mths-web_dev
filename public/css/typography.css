@@ -9,6 +9,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-title);
+  font-size: 2rem;
 }
 
 p,
@@ -16,4 +17,24 @@ input,
 button,
 div {
   font-family: var(--font-text);
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-title);
+    font-size: 3rem;
+  }
+  p,
+  input,
+  button,
+  div {
+    font-family: var(--font-text);
+    font-size: 2rem;
+  }
 }
