@@ -30,6 +30,10 @@ body {
   .nav-lists {
     height: 50px;
   }
+  .nav-list-title{
+    height: 35px;
+    line-height: 33px;
+  }
 }
 
 /*Desktop 1280×720 through 1920×1080*/
@@ -46,5 +50,9 @@ body {
   .nav-lists {
     /* width: 80%; */
     height: 60px;
+  }
+  .nav-list-title{
+    height: 50px;
+    line-height: 48px;
   }
 }

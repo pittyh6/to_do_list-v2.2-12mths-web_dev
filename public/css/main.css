@@ -6,24 +6,25 @@
   box-sizing: border-box;
 }
 
-.container{
-    width: 75%;
-    margin: 0 auto;
-    text-align: center;
+.container {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-input{
+input {
   border-style: none;
   background-color: transparent;
 }
 
-
 /*NavBar*/
-.nav-lists{
+.nav-lists {
   background-color: var(--bg-light-red);
   width: 100%;
   height: 40px;
 }
-.nav-list-title{
+.nav-list-title {
   background-color: var(--light-purple);
+  height: 30px;
+  line-height: 28px;
 }
