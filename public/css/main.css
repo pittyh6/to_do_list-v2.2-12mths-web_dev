@@ -12,7 +12,8 @@
   text-align: center;
 }
 
-input {
+input,
+button {
   border-style: none;
   background-color: transparent;
 }
@@ -23,8 +24,18 @@ input {
   width: 100%;
   height: 40px;
 }
+.nav-list-group{
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
 .nav-list-title {
   background-color: var(--light-purple);
+  /* width: 80%; */
   height: 30px;
   line-height: 28px;
+}
+.btn-delete {
+  background-color: var(--dark-red);
+  /* width: 20%; */
+  height: 30px;
 }
