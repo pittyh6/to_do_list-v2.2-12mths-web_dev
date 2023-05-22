@@ -32,16 +32,21 @@ button {
   height: 40px;
 }
 .nav-list-group{
+  width: 75%;
+  position: absolute;
   display: grid;
   grid-template-columns: 80% 20%;
-  position: absolute;
-  width: 75%;
 }
 .nav-list-title {
   background-color: var(--light-purple);
   height: 30px;
   line-height: 28px;
+  color: var(--light-text);
 }
+.nav-list-title:hover {
+  color: var(--medium-red);
+}
+
 .btn-delete {
   background-color: var(--dark-red);
   height: 30px;

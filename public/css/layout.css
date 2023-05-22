@@ -51,8 +51,10 @@ body {
   }
   /*NavBar*/
   .nav-lists {
-    /* width: 80%; */
     height: 60px;
+  }
+  .nav-list-group{
+    width: 60%; /*It is 60% because screen over 1280 the list group gets to big */
   }
   .nav-list-title{
     height: 50px;
