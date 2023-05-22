@@ -18,6 +18,13 @@ button {
   background-color: transparent;
 }
 
+.invisible{
+  visibility: hidden;
+}
+.visible{
+  visibility: visible;
+}
+
 /*NavBar*/
 .nav-lists {
   background-color: var(--bg-light-red);
@@ -27,15 +34,18 @@ button {
 .nav-list-group{
   display: grid;
   grid-template-columns: 80% 20%;
+  position: absolute;
+  width: 75%;
 }
 .nav-list-title {
   background-color: var(--light-purple);
-  /* width: 80%; */
   height: 30px;
   line-height: 28px;
 }
 .btn-delete {
   background-color: var(--dark-red);
-  /* width: 20%; */
   height: 30px;
+}
+.page-header-list-name{
+  margin-top: 10px;
 }
