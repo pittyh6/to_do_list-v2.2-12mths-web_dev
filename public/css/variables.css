@@ -10,16 +10,16 @@
   --bg-color: #f5e9cf;
   --bg-light-rose: #f9d4d9;
   --bg-light-red: #e9647847;
-  --dark-green: #7db9b6;
   --light-green: #6097b488;
-  --dark-purple: #4d455d;
+  --dark-green: #7db9b6;
   --light-purple: #4d455dc0;
-  --dark-red: #e96479;
-  --medium-red: #e964789e;
+  --dark-purple: #4d455d;
   --light-red: #e9647847;
+  --medium-red: #e964789e;
+  --dark-red: #e96479;
   --light-btn: #d9d9d9;
-  --dark-text: #000;
   --light-text: #e1eeddcf;
-  --dark-input-list: #d1e5cbf1;
+  --dark-text: #000;
   --light-input-list: #e1eeddcf;
+  --dark-input-list: #d1e5cbf1;
 }
