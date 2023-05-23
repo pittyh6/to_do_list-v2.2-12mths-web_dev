@@ -63,4 +63,7 @@ body {
   .btn-delete {
     height: 50px;
   }
+  .page-header-list-name {
+    margin-top: 55px;
+  }
 }
