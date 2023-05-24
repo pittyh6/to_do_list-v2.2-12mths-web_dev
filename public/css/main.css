@@ -48,7 +48,9 @@ button {
 .btn-add,
 .btn-create-list,
 .btn-download-list,
-.btn-create {
+.btn-create,
+.nav-list-title,
+.input-item-to-list {
   height: 30px;
 }
 
@@ -66,7 +68,6 @@ button {
 }
 .nav-list-title {
   background-color: var(--light-purple);
-  height: 30px;
   line-height: 28px;
   color: var(--light-text);
   text-align: left;
@@ -82,8 +83,11 @@ button {
 }
 
 /* main - Add Items */
+.sec-insert-items-to-list {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
 .input-item-to-list {
   width: 100%;
-  height: 40px;
   background-color: var(--light-green);
 }

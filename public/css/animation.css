@@ -1,13 +1,13 @@
 .ball-animation{
     position: absolute;
     z-index: -1;
-    width: 50%;
+    width: 35%;
     top: 20px;
     left: -10px;
 }
 
 @media (min-width: 768px){
     .ball-animation{
-        top: -100px;
+        top: -50px;
     }
 }
