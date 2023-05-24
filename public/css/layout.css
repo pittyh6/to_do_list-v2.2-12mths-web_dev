@@ -44,12 +44,6 @@ body {
   .nav-lists {
     height: 50px;
   }
-  .nav-list-title {
-    height: 35px;
-  }
-  .btn-delete {
-    height: 35px;
-  }
 }
 
 /*Desktop 1280×720 through 1920×1080*/
@@ -83,12 +77,6 @@ body {
   }
   .nav-list-group {
     width: 60%; /*It is 60% because screen over 1280 the list group gets to big */
-  }
-  .nav-list-title {
-    height: 50px;
-  }
-  .btn-delete {
-    height: 50px;
   }
   .page-header-list-name {
     margin-top: 110px;
