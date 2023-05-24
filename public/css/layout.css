@@ -35,13 +35,17 @@ body {
   .input-item-to-list {
     height: 35px;
   }
+  /*reused*/
+  p{
+    line-height: 33px;
+  }
+
   /*NavBar*/
   .nav-lists {
     height: 50px;
   }
   .nav-list-title {
     height: 35px;
-    line-height: 33px;
   }
   .btn-delete {
     height: 35px;
@@ -67,6 +71,12 @@ body {
   .ball-animation {
     float: left;
   }
+
+  /*reused*/
+  p{
+    line-height: 48px;
+  }
+
   /*NavBar*/
   .nav-lists {
     height: 60px;
@@ -76,12 +86,11 @@ body {
   }
   .nav-list-title {
     height: 50px;
-    line-height: 48px;
   }
   .btn-delete {
     height: 50px;
   }
   .page-header-list-name {
-    margin-top: 55px;
+    margin-top: 110px;
   }
 }

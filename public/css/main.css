@@ -18,6 +18,7 @@ button {
   background-color: transparent;
 }
 
+/*show and hide classes*/
 .invisible {
   visibility: hidden;
 }
@@ -54,7 +55,19 @@ button {
   height: 30px;
 }
 
-/*NavBar*/
+/*reused*/
+p{
+  line-height: 28px;
+  color: var(--light-text);
+  text-align: left;
+  padding-left: 30px;
+}
+p:hover{
+  color: var(--medium-red);
+  transform: scale(1.01);
+}
+
+/* ----------------- NavBar ---------------------------*/
 .nav-lists {
   background-color: var(--bg-light-red);
   width: 100%;
@@ -68,26 +81,28 @@ button {
 }
 .nav-list-title {
   background-color: var(--light-purple);
-  line-height: 28px;
-  color: var(--light-text);
-  text-align: left;
-  padding-left: 30px;
-}
-.nav-list-title:hover {
-  color: var(--medium-red);
-  transform: scale(1.01);
 }
 
 .page-header-list-name {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
+/* ----------------- Main ---------------------------*/
 /* main - Add Items */
 .sec-insert-items-to-list {
   display: grid;
   grid-template-columns: 80% 20%;
+  margin-bottom: 15px;
 }
 .input-item-to-list {
   width: 100%;
   background-color: var(--light-green);
+}
+/* main - return items */
+.sec-return-items-to-list {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+.item-list {
+  background-color: var(--dark-purple);
 }
