@@ -79,8 +79,8 @@ p:hover {
   height: 40px;
 }
 .nav-list-group {
-  width: 75%;
-  position: absolute;
+  /* width: 75%;
+  position: absolute; */
   display: grid;
   grid-template-columns: 80% 20%;
 }
@@ -113,6 +113,9 @@ p:hover {
 }
 
 /* --------- Sec. create and Download list ----------*/
+.sec-create-download-list{
+  margin-top: 20px;
+}
 /*buttons*/
 .buttons-create-download-list {
   display: grid;

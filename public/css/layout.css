@@ -26,16 +26,16 @@ body {
 
 /*Tablet  601×962 through 1280×800 */
 @media only screen and (min-width: 601px) {
-    .btn-delete,
-    .btn-add,
-    .btn-create-list,
-    .btn-download-list,
-    .btn-create,
-    .btn-create-new-list,
-    .btn-download-list,
-    .nav-list-title,
-    .input-item-to-list,
-    .input-new-list {
+  .btn-delete,
+  .btn-add,
+  .btn-create-list,
+  .btn-download-list,
+  .btn-create,
+  .btn-create-new-list,
+  .btn-download-list,
+  .nav-list-title,
+  .input-item-to-list,
+  .input-new-list {
     height: 35px;
   }
   /*reused*/
@@ -49,6 +49,9 @@ body {
   }
 
   /* --------- Sec. create and Download list ----------*/
+  .sec-create-download-list {
+    margin-top: 40px;
+  }
   /*buttons*/
   .btn-create-new-list {
     margin-left: 50px;
@@ -62,6 +65,9 @@ body {
 
 /*Desktop 1280×720 through 1920×1080*/
 @media only screen and (min-width: 1280px) {
+  /* .container {
+    width: 60%;
+  } */
   .container > * {
     width: 80%;
     margin: 0 auto;
@@ -92,14 +98,17 @@ body {
   .nav-lists {
     height: 60px;
   }
-  .nav-list-group {
-    width: 60%; /*It is 60% because screen over 1280 the list group gets to big */
-  }
+  /* .nav-list-group {
+    width: 60%; /*It is 60% because screen over 1280 the list group gets to big 
+  } */
   .page-header-list-name {
     margin-top: 110px;
   }
 
   /* --------- Sec. create and Download list ----------*/
+  .sec-create-download-list {
+    margin-top: 80px;
+  }
   /*buttons*/
   .btn-create-new-list {
     margin-left: 200px;
