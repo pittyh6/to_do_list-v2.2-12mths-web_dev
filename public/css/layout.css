@@ -26,17 +26,20 @@ body {
 
 /*Tablet  601×962 through 1280×800 */
 @media only screen and (min-width: 601px) {
-  .btn-delete,
-  .btn-add,
-  .btn-create-list,
-  .btn-download-list,
-  .btn-create,
-  .nav-list-title,
-  .input-item-to-list {
+    .btn-delete,
+    .btn-add,
+    .btn-create-list,
+    .btn-download-list,
+    .btn-create,
+    .btn-create-new-list,
+    .btn-download-list,
+    .nav-list-title,
+    .input-item-to-list,
+    .input-new-list {
     height: 35px;
   }
   /*reused*/
-  p{
+  p {
     line-height: 33px;
   }
 
@@ -44,7 +47,18 @@ body {
   .nav-lists {
     height: 50px;
   }
+
+  /* --------- Sec. create and Download list ----------*/
+  /*buttons*/
+  .btn-create-new-list {
+    margin-left: 50px;
+  }
+  .btn-download-list {
+    margin-right: 50px;
+  }
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 /*Desktop 1280×720 through 1920×1080*/
 @media only screen and (min-width: 1280px) {
@@ -57,8 +71,11 @@ body {
   .btn-create-list,
   .btn-download-list,
   .btn-create,
+  .btn-create-new-list,
+  .btn-download-list,
   .nav-list-title,
-  .input-item-to-list {
+  .input-item-to-list,
+  .input-new-list {
     height: 50px;
   }
   /*animation*/
@@ -67,7 +84,7 @@ body {
   }
 
   /*reused*/
-  p{
+  p {
     line-height: 48px;
   }
 
@@ -80,5 +97,14 @@ body {
   }
   .page-header-list-name {
     margin-top: 110px;
+  }
+
+  /* --------- Sec. create and Download list ----------*/
+  /*buttons*/
+  .btn-create-new-list {
+    margin-left: 200px;
+  }
+  .btn-download-list {
+    margin-right: 200px;
   }
 }

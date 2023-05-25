@@ -37,9 +37,9 @@ button {
 .btn-add {
   background-color: var(--dark-green);
 }
-.btn-create-list,
+.btn-create-new-list,
 .btn-download-list {
-  background-color: var(--light-);
+  background-color: var(--light-btn);
 }
 .btn-create {
   background-color: var(--dark-input-list);
@@ -50,19 +50,22 @@ button {
 .btn-create-list,
 .btn-download-list,
 .btn-create,
+.btn-create-new-list,
+.btn-download-list,
 .nav-list-title,
-.input-item-to-list {
+.input-item-to-list,
+.input-new-list{
   height: 30px;
 }
 
 /*reused*/
-p{
+p {
   line-height: 28px;
   color: var(--light-text);
   text-align: left;
   padding-left: 30px;
 }
-p:hover{
+p:hover {
   color: var(--medium-red);
   transform: scale(1.01);
 }
@@ -105,4 +108,22 @@ p:hover{
 }
 .item-list {
   background-color: var(--dark-purple);
+}
+
+/* --------- Sec. create and Download list ----------*/
+/*buttons*/
+.buttons-create-download-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.buttons-create-download-list > * {
+  margin: 20px;
+}
+/*create list field*/
+.field-create-list{
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+.input-new-list{
+  background-color: var(--light-input-list);
 }
