@@ -17,7 +17,9 @@ button {
   border-style: none;
   background-color: transparent;
 }
-
+input{
+  text-indent: 30px;
+}
 /*show and hide classes*/
 .invisible {
   visibility: hidden;
