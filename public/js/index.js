@@ -10,18 +10,7 @@ let btn_create = $(".btn-create")
 let nav_list_group = $(".nav-list-group")
 let field_create_list = $(".field-create-list")
 
-
-function hide_show(elementClicked){
-    if(elementClicked.hasClass("invisible")){
-        elementClicked.removeClass("invisible")
-        elementClicked.addClass("visible")
-    }else{
-        elementClicked.removeClass("visible")
-        elementClicked.addClass("invisible")
-    }
-}
-
-
+//hide and show nav_list on the navbar and the create new list field
 nav_lists[0].addEventListener("click",function(){
     hide_show(nav_list_group)
 })
