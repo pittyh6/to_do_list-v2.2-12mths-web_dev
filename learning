@@ -1,4 +1,36 @@
-* understanding mongodb
-how to install brew
-how to install mongodb
-how to install mongosh
+- understanding mongodb
+  how to install brew
+  how to install mongodb
+  how to install mongosh
+
+- schema structure
+  list[
+    {
+        _id: 1,
+        name_list: to do,
+        elements: [
+          wash the dishes,
+          laundry,
+          watch k-drama  
+        ],
+    },
+    {
+        _id: 2,
+        name_list: English Studies,
+        elements: [
+          read,
+          write,
+          speak,
+          listen,  
+        ],
+    }
+    {
+        _id: 3,
+        name_list: Dev Studies,
+        elements: [
+          JavaScript,
+          Express.js,
+          Mongosh, 
+        ],
+    }
+  ]
