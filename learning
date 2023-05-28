@@ -6,31 +6,60 @@
 - schema structure
   list[
     {
-        _id: 1,
+        _id: t1y,
         name_list: to do,
-        elements: [
-          wash the dishes,
-          laundry,
-          watch k-drama  
+        items: [
+            {
+                _id:l1q,
+                item_name: wash the dishes,
+            },
+            {
+                _id:k2e,
+                item_name: watch k-drama 
+            },
         ],
     },
     {
-        _id: 2,
+        _id: r2g,
         name_list: English Studies,
         elements: [
-          read,
-          write,
-          speak,
-          listen,  
+             {
+                _id:j1
+                item_name: read,
+            },
+             {
+                _id:h2
+                item_name: write,
+            },
+            {
+                _id:g3
+                item_name: speak,
+            }, 
+            {
+                _id:f4
+                item_name: listen,
+            },
         ],
     }
     {
-        _id: 3,
+        _id: d3g,
         name_list: Dev Studies,
         elements: [
-          JavaScript,
-          Express.js,
-          Mongosh, 
+            {
+                _id:d1b,
+                item_name: JavaScript,
+            },
+            {
+                _id:s2n,
+                item_name: Express.js,
+            },
+            {
+                _id:a3m,
+                item_name: Mongosh, 
+            },
+          
+          
+          
         ],
     }
   ]
