@@ -4,6 +4,11 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
+//connect mongodb with mongoose
+const mongoose = require('mongoose')
+mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true})
+
+
 //set the view Engine to EJS
 app.set('views', './views');
 app.set('view engine', 'ejs');
