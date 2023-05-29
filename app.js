@@ -11,6 +11,17 @@ mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true,
 import List from './model/List'
 
 
+//create new listdb
+const todoList = new List({
+    name_list: "to do list",
+    items:[
+        item_name: "buy food",
+        item_name: "Go to the bank"
+    ]
+})
+
+await todoList.save()
+
 //set the view Engine to EJS
 app.set('views', './views');
 app.set('view engine', 'ejs');
