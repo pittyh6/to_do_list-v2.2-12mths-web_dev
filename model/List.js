@@ -8,3 +8,8 @@ const listSchema = new Schema({
         item_name: String,
     }]
 })
+
+
+//create model
+const List = model('List', listSchema);
+export default List;
