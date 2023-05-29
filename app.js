@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 //connect mongodb with mongoose
 const mongoose = require('mongoose')
 mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true})
+//import model
+import List from './model/List'
 
 
 //set the view Engine to EJS
