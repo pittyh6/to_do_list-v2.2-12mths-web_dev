@@ -8,17 +8,16 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true})
 //import model
-import List from './model/List'
+import List from './model/List.js'
 
 
 //create new listdb
 const todoList = new List({
-    name_list: "to do list",
+    name_list: 'to do list',
     items:[
-        item_name: "buy food",
-        item_name: "Go to the bank"
+        'buy food', 'Go to the bank',
     ]
-})
+});
 
 await todoList.save
 
