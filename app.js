@@ -1,11 +1,14 @@
 /*jshint esversion: 6 */
 
-const express = require('express');
+/* const express = require('express');*/
+import express from 'express'
 const app = express();
-const bodyParser = require('body-parser');
+/*const bodyParser = require('body-parser');*/
+import bodyParser from 'body-parser';
 
 //connect mongodb with mongoose
-const mongoose = require('mongoose')
+/*const mongoose = require('mongoose')*/
+import mongoose from 'mongoose';
 mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true})
 //import model
 import List from './model/List.js'
@@ -37,7 +40,7 @@ app.get('/',function(req,res){
 })
 
 //start server
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3002
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)
 })

@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
-  "type":"module",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pittyh6/to_do_list-v2.2-12mths-web_dev.git"
@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/pittyh6/to_do_list-v2.2-12mths-web_dev#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongoose": "^7.2.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"

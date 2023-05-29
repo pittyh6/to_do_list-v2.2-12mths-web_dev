@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+
 const {Schema, model} = mongoose;
 
 //Create the schema for listdb
