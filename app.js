@@ -20,7 +20,7 @@ const todoList = new List({
     ]
 })
 
-await todoList.save()
+await todoList.save
 
 //set the view Engine to EJS
 app.set('views', './views');
