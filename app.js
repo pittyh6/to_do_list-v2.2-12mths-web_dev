@@ -21,8 +21,7 @@ const todoList = new List({
         'buy food', 'Go to the bank',
     ]
 });
-
-await todoList.save
+//await todoList.save()
 
 //set the view Engine to EJS
 app.set('views', './views');
@@ -40,7 +39,7 @@ app.get('/',function(req,res){
 })
 
 //start server
-const PORT = process.env.PORT || 3002
+const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)
 })
