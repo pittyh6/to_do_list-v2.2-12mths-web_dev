@@ -6,6 +6,7 @@ const app = express();
 /*const bodyParser = require('body-parser');*/
 import bodyParser from 'body-parser';
 
+/*-----------------------DATABASE-------------------------------------*/
 //connect mongodb with mongoose
 /*const mongoose = require('mongoose')*/
 import mongoose from 'mongoose';
@@ -23,6 +24,19 @@ const todoList = new List({
 });
 //await todoList.save()
 
+//find first element
+const findOne = await List.findOne({})
+console.log(findOne)
+//find all elements
+const findAll = await List.find({})
+console.log(findAll)
+/*---------------------------------------------------------------------*/
+
+
+
+
+
+/*------------------------------ROOT-------------------------------------*/
 //set the view Engine to EJS
 app.set('views', './views');
 app.set('view engine', 'ejs');
@@ -39,7 +53,9 @@ app.get('/',function(req,res){
 })
 
 //start server
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3004
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)
 })
+
+/*-----------------------------------------------------------------------*/
