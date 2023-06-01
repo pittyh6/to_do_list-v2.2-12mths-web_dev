@@ -30,6 +30,12 @@ console.log(findOne)
 //find all elements
 const findAll = await List.find({})
 console.log(findAll)
+//return all lists by the name of the list
+const findAllByNameList = await List.find({name_list:"to do list"})
+console.log(findAllByNameList);
+//return a specific field from db (name_list)
+const findFieldName = await List.find({}).select('name_list -_id')
+console.log(findFieldName)
 /*---------------------------------------------------------------------*/
 
 
