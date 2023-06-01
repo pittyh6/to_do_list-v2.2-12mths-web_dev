@@ -36,6 +36,8 @@ console.log(findAllByNameList);
 //return a specific field from db (name_list)
 const findFieldName = await List.find({}).select('name_list -_id')
 console.log(findFieldName)
+
+
 /*---------------------------------------------------------------------*/
 
 
