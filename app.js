@@ -37,7 +37,6 @@ console.log(findAllByNameList);
 const findFieldName = await List.find({}).select('name_list -_id')
 console.log(findFieldName)
 
-
 /*---------------------------------------------------------------------*/
 
 
