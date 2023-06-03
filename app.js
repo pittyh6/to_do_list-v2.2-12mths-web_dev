@@ -57,7 +57,7 @@ app.use(express.static('public'))
 //Define routes
 app.get('/',function(req,res){
     //res.sendFile(__dirname + './views/pages/index.ejs')
-    res.render("pages/index.ejs")
+    res.render("pages/index.ejs", {findFieldName})
 })
 
 //start server
