@@ -2,8 +2,10 @@
     <div class="dropbox-lists">
         <input type="button" class="nav-lists" value="Lists">
         <div class="nav-list-group invisible">
-            <p class="nav-list-title"><%= findFieldName%></p> <!-- inserir variavel com titulo do banco de dados -->
+            <% for(let i = 0; i < findFieldName.length; i++) { %>
+            <p class="nav-list-title"><%= findFieldName[i] %></p> <!-- inserir variavel com titulo do banco de dados -->
             <button class="btn-delete">Delete</button>
+            <% } %>
         </div>
         <h1 class="page-header-list-name"><%= findFieldName %></h1>
     </div>
