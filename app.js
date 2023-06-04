@@ -26,16 +26,17 @@ const todoList = new List({
 
 //find first element
 const findOne = await List.findOne({})
-console.log(findOne)
+console.log("find one: ", findOne)
 //find all elements
 const findAll = await List.find({})
-console.log(findAll)
+console.log("find all: ",findAll)
 //return all lists by the name of the list
 const findAllByNameList = await List.find({name_list:"to do list"})
-console.log(findAllByNameList);
+console.log("find all by name list: ", findAllByNameList);
 //return a specific field from db (name_list)
 const findFieldName = await List.find({}).select('name_list -_id')
-console.log(findFieldName)
+console.log("find by field name -id: ", findFieldName)
+
 
 
 /*---------------------------------------------------------------------*/
@@ -57,7 +58,7 @@ app.use(express.static('public'))
 //Define routes
 app.get('/',function(req,res){
     //res.sendFile(__dirname + './views/pages/index.ejs')
-    res.render("pages/index.ejs", {findFieldName})
+    res.render("pages/index.ejs", {findAll})
 })
 
 //start server
