@@ -1,3 +1,5 @@
+import { name } from "ejs"
+
 - understanding mongodb
   how to install brew
   how to install mongodb
@@ -64,3 +66,13 @@
 
 * send data from mongoose to html understandinga
 - how to send information saved from mongoose to html h1 tag
+
+* Needs to do
+- create/generate new page when click on a list name
+- add the items/elements from db on the correct page
+- add the correct name list to the h1 accordingly the list selected
+
+- delete list
+- create list 
+- add element to the list databases
+- delete elements/items from the list databases
