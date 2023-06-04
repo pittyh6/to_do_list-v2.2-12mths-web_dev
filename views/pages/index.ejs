@@ -17,8 +17,8 @@
                     <button type="submit" class="btn-add">Add</button>
                 </section>
                 <section class="sec-return-items-to-list">
-                    <% for(let i = 0; i < findAll.length; i++) { %>
-                    <p class="item-list"><%= findAll[i].items %></p>
+                    <% for(let i = 0; i < findAll[0].items.length; i++) { %>
+                    <p class="item-list"><%= findAll[0].items[i] %></p>
                     <button class="btn-delete">Delete</button>
                     <% } %>
                 </section>
