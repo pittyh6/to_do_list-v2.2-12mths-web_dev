@@ -1,3 +1,4 @@
+
 // buttons
 let nav_lists = $(".nav-lists")
 let btn_delete = $(".btn-delete")
@@ -21,4 +22,5 @@ btn_create_new_list[0].addEventListener('click', function(){
 //select list
 nav_lists[0].addEventListener("click", function(){
     getClickedElementPage()
+    console.log("using here: ", textElementClicked)
 })

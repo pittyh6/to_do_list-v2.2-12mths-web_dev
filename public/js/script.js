@@ -11,8 +11,8 @@ function hide_show(elementClicked) {
 
 function getClickedElementPage() {
     window.onclick = e => {
-        console.log(e.target.innerText)
+        textElementClicked = e.target.innerText
+        console.log(textElementClicked)
+        return textElementClicked
     }
 }
-
-
