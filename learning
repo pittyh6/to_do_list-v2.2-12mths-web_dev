@@ -76,3 +76,5 @@ import { name } from "ejs"
 - create list 
 - add element to the list databases
 - delete elements/items from the list databases
+
+- Traying to understand how I am going to selec the list and show the items from the seleceted list
