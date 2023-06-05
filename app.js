@@ -24,19 +24,21 @@ const todoList = new List({
 });
 //await todoList.save()
 
-//find first element
-const findOne = await List.findOne({})
-console.log("find one: ", findOne)
+
 //find all elements
 const findAll = await List.find({})
 console.log("find all: ",findAll)
+/*
+//find first element
+const findOne = await List.findOne({})
+console.log("find one: ", findOne)
 //return all lists by the name of the list
 const findAllByNameList = await List.find({name_list:"to do list"})
 console.log("find all by name list: ", findAllByNameList);
 //return a specific field from db (name_list)
 const findFieldName = await List.find({}).select('name_list -_id')
 console.log("find by field name -id: ", findFieldName)
-
+*/
 
 
 /*---------------------------------------------------------------------*/
