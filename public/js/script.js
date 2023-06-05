@@ -8,3 +8,7 @@ function hide_show(elementClicked) {
         elementClicked.addClass("invisible")
     }
 }
+
+window.onclick = e => {
+    console.log(e.target.innerText)
+}
