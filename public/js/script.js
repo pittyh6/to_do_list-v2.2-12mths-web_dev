@@ -9,6 +9,10 @@ function hide_show(elementClicked) {
     }
 }
 
-window.onclick = e => {
-    console.log(e.target.innerText)
+function getClickedElementPage() {
+    window.onclick = e => {
+        console.log(e.target.innerText)
+    }
 }
+
+
