@@ -19,8 +19,3 @@ btn_create_new_list[0].addEventListener('click', function(){
     hide_show(field_create_list)
 })
 
-//select list
-nav_lists[0].addEventListener("click", function(){
-    getClickedElementPage()
-    console.log("using here: ", textElementClicked)
-})

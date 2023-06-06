@@ -12,6 +12,7 @@ function hide_show(elementClicked) {
 function getClickedElementPage() {
     window.onclick = e => {
         textElementClicked = e.target.innerText
+        console.log("click ", await List.find({}))
         console.log(textElementClicked)
         return textElementClicked
     }
