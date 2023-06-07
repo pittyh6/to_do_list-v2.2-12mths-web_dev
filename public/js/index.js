@@ -1,4 +1,4 @@
-
+import {findAll} from '~/app.js'
 // buttons
 let nav_lists = $(".nav-lists")
 let btn_delete = $(".btn-delete")
@@ -19,3 +19,8 @@ btn_create_new_list[0].addEventListener('click', function(){
     hide_show(field_create_list)
 })
 
+
+//selected nav-bar list name
+nav_lists[0].addEventListener("click",function(){
+    getClickedElementPage(findAll)
+})

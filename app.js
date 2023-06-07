@@ -28,6 +28,7 @@ const todoList = new List({
 //find all elements
 const findAll = await List.find({})
 console.log("find all: ",findAll)
+export {findAll}
 /*
 //find first element
 const findOne = await List.findOne({})

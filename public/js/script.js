@@ -9,11 +9,16 @@ function hide_show(elementClicked) {
     }
 }
 
-function getClickedElementPage() {
+
+function getClickedElementPage(findAll) {
     window.onclick = e => {
         textElementClicked = e.target.innerText
-        console.log("click ", await List.find({}))
-        console.log(textElementClicked)
-        return textElementClicked
+        if ($(e.target).hasClass('nav-list-title') == true) {
+            console.log(textElementClicked)
+            return textElementClicked
+        } else {
+            console.log("doesn't have the class .nav-list-title")
+        }
+
     }
 }
