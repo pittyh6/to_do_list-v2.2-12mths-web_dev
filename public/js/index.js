@@ -1,4 +1,4 @@
-import {findAll} from '~/app.js'
+import { findAll } from "../../app.js"
 // buttons
 let nav_lists = $(".nav-lists")
 let btn_delete = $(".btn-delete")
