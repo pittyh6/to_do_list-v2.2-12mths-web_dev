@@ -19,6 +19,5 @@ function getClickedElementPage(findAll) {
         } else {
             console.log("doesn't have the class .nav-list-title")
         }
-
     }
 }
