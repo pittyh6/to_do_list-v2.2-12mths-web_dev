@@ -1,4 +1,4 @@
-import { findAll } from "../../app.js"
+//import { findAll } from "../../app.js"
 // buttons
 let nav_lists = $(".nav-lists")
 let btn_delete = $(".btn-delete")
@@ -22,6 +22,6 @@ btn_create_new_list[0].addEventListener('click', function(){
 
 //selected nav-bar list name
 nav_lists[0].addEventListener("click",function(){
-    console.log("acessou findAll inside index.js ", findAll)
-    getClickedElementPage(findAll)
+    const navListTitleClass = "nav-list-title"
+    getClickedElementPage(navListTitleClass)
 })
