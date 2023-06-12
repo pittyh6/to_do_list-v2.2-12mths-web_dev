@@ -1,4 +1,4 @@
-import * as app from '../../app.js'
+import { findAll } from "../../app.js" 
 
 // function to add or remove classes invisible and visible. It has been used to show or hide an element
 function hide_show(elementClicked) {
@@ -18,6 +18,7 @@ function getClickedElementPage(elementSelectedPage, nameFunction) {
         if ($(e.target).hasClass(elementSelectedPage) == true) {
             console.log(textElementClicked)
             nameFunction(textElementClicked)
+            console.log("testeeeeeeee ", findAll )
             return textElementClicked
         } else {
             console.log("doesn't have the class/element ", elementSelectedPage)

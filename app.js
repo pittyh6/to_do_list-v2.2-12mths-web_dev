@@ -26,7 +26,7 @@ const todoList = new List({
 
 
 //find all elements
-const findAll = await List.find({})
+let findAll = await List.find({})
 console.log("find all: ",findAll)
 export { findAll }
 /*
