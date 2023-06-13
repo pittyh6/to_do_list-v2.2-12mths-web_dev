@@ -18,13 +18,13 @@ function getClickedElementPage(elementSelectedPage, nameFunction) {
         if ($(e.target).hasClass(elementSelectedPage) == true) {
             console.log(textElementClicked)
             nameFunction(textElementClicked)
-            console.log("testeeeeeeee ", findAll )
             return textElementClicked
         } else {
             console.log("doesn't have the class/element ", elementSelectedPage)
         }
     }
 }
+
 
 // find the element clicked inside the db
 function findListClickedOnDB(textElementClicked){

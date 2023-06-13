@@ -6,7 +6,10 @@ const app = express();
 /*const bodyParser = require('body-parser');*/
 import bodyParser from 'body-parser';
 
-/*-----------------------DATABASE-------------------------------------*/
+/*-------------------------import variables-----------------------------*/
+// import {textElementClicked} from './public/js/script'
+
+/*-----------------------------DATABASE---------------------------------*/
 //connect mongodb with mongoose
 /*const mongoose = require('mongoose')*/
 import mongoose from 'mongoose';
