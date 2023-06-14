@@ -67,6 +67,8 @@ import { name } from "ejs"
 * send data from mongoose to html understandinga
 - how to send information saved from mongoose to html h1 tag
 
+- understanding Webpack 
+
 * Needs to do
 - create/generate new page when click on a list name
 - add the items/elements from db on the correct page
