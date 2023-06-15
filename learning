@@ -68,6 +68,7 @@ import { name } from "ejs"
 - how to send information saved from mongoose to html h1 tag
 
 - understanding Webpack 
+- install and config webpack
 
 * Needs to do
 - create/generate new page when click on a list name
