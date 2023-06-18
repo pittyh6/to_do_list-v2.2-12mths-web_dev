@@ -33,7 +33,6 @@ const todoList = new List({
 const findAll = await List.find({})
 console.log("find all: ",findAll)
 export {findAll} 
-
 /*
 //find first element
 const findOne = await List.findOne({})
@@ -68,6 +67,11 @@ app.use(express.static('public'))
 app.get('/',function(req,res){
     //res.sendFile(__dirname + './views/pages/index.ejs')
     res.render("pages/index.ejs", {findAll})
+})
+
+//custom route
+app.get('/:customListName', function(req,res){
+    console.log(req.params.customListName)
 })
 
 //start server

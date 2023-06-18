@@ -17,6 +17,7 @@ function getClickedElementPage(elementSelectedPage, nameFunction) {
         textElementClicked = e.target.innerText
         if ($(e.target).hasClass(elementSelectedPage) == true) {
             console.log(textElementClicked)
+            window.location.href="http://localhost:3000/"+textElementClicked
             nameFunction(textElementClicked)
             return textElementClicked
         } else {
