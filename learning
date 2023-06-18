@@ -68,6 +68,7 @@ import { name } from "ejs"
 - how to send information saved from mongoose to html h1 tag
 
 - understanding Webpack 
+- trying to get into the webpack
 - install and config webpack
 
 * Needs to do
