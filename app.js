@@ -71,10 +71,12 @@ app.get('/',function(req,res){
 
 //custom route
 app.get('/:customListName', function(req,res){
-    console.log(req.params.customListName)
-    const findListClicked = List.find({'name_list': 'customListName'})
-    console.log(findListClicked)
-    res.render("pages/index.ejs", {findListClicked})
+    const customListNameClicked = req.params.customListName
+    console.log(customListNameClicked)
+    const findListClicked = List.findOne({name_list: customListNameClicked})
+    console.log("findOne ", findListClicked)
+
+    //res.render("pages/index.ejs", {findListClicked})
 })
 
 //start server
