@@ -1,9 +1,9 @@
 /*jshint esversion: 6 */
 
-/* const express = require('express');*/
+//const express = require('express');
 import express from 'express'
 const app = express();
-/*const bodyParser = require('body-parser');*/
+//const bodyParser = require('body-parser');
 import bodyParser from 'body-parser';
 
 /*-------------------------import variables-----------------------------*/
@@ -11,11 +11,12 @@ import bodyParser from 'body-parser';
 
 /*-----------------------------DATABASE---------------------------------*/
 //connect mongodb with mongoose
-/*const mongoose = require('mongoose')*/
+//const mongoose = require('mongoose')
 import mongoose from 'mongoose';
 mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true})
 //import model
 import List from './model/List.js'
+//const List = require('./model/List.js');
 
 
 //create new listdb
@@ -29,9 +30,10 @@ const todoList = new List({
 
 
 //find all elements
-let findAll = await List.find({})
+const findAll = await List.find({})
 console.log("find all: ",findAll)
 export {findAll} 
+
 /*
 //find first element
 const findOne = await List.findOne({})
