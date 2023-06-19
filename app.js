@@ -81,7 +81,7 @@ app.get('/:customListName', function (req, res) {
             console.log('no list')
         } else {
             console.log('foundeddddddd', foundList)
-            res.render("pages/index.ejs", { listName: foundList.name_list, newListItem: foundList.items })
+            res.render("pages/index.ejs", { listName: foundList.name_list, newListItem: foundList.items, findAll })
         }
     })
 
