@@ -66,7 +66,8 @@ app.use(express.static('public'))
 //Define routes
 app.get('/', function (req, res) {
     //res.sendFile(__dirname + './views/pages/index.ejs')
-    res.render("pages/index.ejs", { findAll })
+    res.render("pages/index.ejs", {listName: findAll[0].name_list, newListItem: findAll[0]})
+    //res.render("pages/index.ejs", { findAll })
 })
 
 //custom route
@@ -80,10 +81,10 @@ app.get('/:customListName', function (req, res) {
             console.log('no list')
         } else {
             console.log('foundeddddddd', foundList)
+            res.render("pages/index.ejs", { listName: foundList.name_list, newListItem: foundList.items })
         }
     })
 
-    //res.render("pages/index.ejs", {findListClicked})
 })
 
 //start server
