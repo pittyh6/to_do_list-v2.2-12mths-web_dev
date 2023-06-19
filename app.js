@@ -66,7 +66,7 @@ app.use(express.static('public'))
 //Define routes
 app.get('/', function (req, res) {
     //res.sendFile(__dirname + './views/pages/index.ejs')
-    res.render("pages/index.ejs", {listName: findAll[0].name_list, newListItem: findAll[0],findAll})
+    res.render("pages/index.ejs", {listName: findAll[0].name_list, newListItem: findAll[0].items,findAll})
     //res.render("pages/index.ejs", { findAll })
 })
 
