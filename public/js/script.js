@@ -12,13 +12,12 @@ function hide_show(elementClicked) {
 }
 
 // to get the element which contains an specific class passed by parameter
-function getClickedElementPage(elementSelectedPage, nameFunction) {
+function getClickedElementPage(elementSelectedPage) {
     window.onclick = e => {
         textElementClicked = e.target.innerText
         if ($(e.target).hasClass(elementSelectedPage) == true) {
             console.log(textElementClicked)
             window.location.href="http://localhost:3000/"+textElementClicked
-            nameFunction(textElementClicked)
             return textElementClicked
         } else {
             console.log("doesn't have the class/element ", elementSelectedPage)
@@ -27,7 +26,3 @@ function getClickedElementPage(elementSelectedPage, nameFunction) {
 }
 
 
-// find the element clicked inside the db
-function findListClickedOnDB(textElementClicked){
-    console.log("findListClickedOnDB ",textElementClicked)
-}

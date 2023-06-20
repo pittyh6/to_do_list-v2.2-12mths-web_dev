@@ -24,5 +24,5 @@ btn_create_new_list[0].addEventListener('click', function(){
 //selected nav-bar list name
 nav_lists[0].addEventListener("click",function(){
     const navListTitleClass = "nav-list-title"
-    getClickedElementPage(navListTitleClass,findListClickedOnDB)
+    getClickedElementPage(navListTitleClass)
 })
