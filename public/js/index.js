@@ -38,3 +38,6 @@ btn_delete.forEach(btnDelete => {
 })
 
 //select the Add item to the list button
+btn_add[0].addEventListener('click', function(){
+    console.log("add button clicked")
+})
