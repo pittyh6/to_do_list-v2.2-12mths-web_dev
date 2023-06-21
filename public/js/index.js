@@ -48,3 +48,6 @@ btn_create[0].addEventListener('click', function(){
 })
 
 //select the Download List button
+btn_download_list[0].addEventListener('click', function(){
+    console.log('btn_download_list clicked')
+})
