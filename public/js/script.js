@@ -18,7 +18,8 @@ function getClickedElementPage(elementSelectedPage) {
             window.location.href="http://localhost:3000/"+textElementClicked
             return textElementClicked
         } else {
-            console.log("doesn't have the class/element ", elementSelectedPage)
+            //console.log("doesn't have the class/element ", elementSelectedPage)
+            // This block is empty, so it does nothing
         }
     }
 }
