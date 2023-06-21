@@ -41,3 +41,10 @@ btn_delete.forEach(btnDelete => {
 btn_add[0].addEventListener('click', function(){
     console.log("add button clicked")
 })
+
+//select the Create List button 
+btn_create[0].addEventListener('click', function(){
+    console.log("create new list button clicked")
+})
+
+//select the Download List button
