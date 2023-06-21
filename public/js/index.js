@@ -1,9 +1,7 @@
-//import findAll from "../../app.js"
-//import findAll = require ('../../app.js');
+
 // buttons
 let nav_lists = $(".nav-lists")
 let btn_delete = document.querySelectorAll('.btn-delete')
-// let btn_delete = $(".btn-delete")
 let btn_add = $(".btn-add")
 let btn_create_new_list = $(".btn-create-new-list")
 let btn_download_list = $(".btn-download-list")
@@ -32,9 +30,11 @@ nav_lists[0].addEventListener("click",function(){
 btn_delete.forEach(btnDelete => {
     btnDelete.addEventListener('click', event => {
         console.log('btn_deleted event: ', event)
+        const elementSelectedList = event.target.previousElementSibling
+        console.log('elementSelectedList: ', elementSelectedList)
+        const textElementSelectedList = elementSelectedList.textContent
+        console.log('textElementSelectedList: ', textElementSelectedList)
     })
 })
-/*document.addEventListener('click', function(){
-    console.log("delete clicked")
-    deleteButtonPage()
-})*/
+
+//select the Add item to the list button
