@@ -65,16 +65,20 @@ app.use(express.static('public'))
 
 //Define routes
 app.get('/', function (req, res) {
-    res.render("pages/index.ejs", {listName: findAll[0].name_list, newListItem: findAll[0].items,findAll})
+    res.render("pages/index.ejs", { listName: findAll[0].name_list, newListItem: findAll[0].items, findAll })
 })
 
 //custom route
 app.get('/:customListName', function (req, res) {
+    console.log("inside custom")
     const customListNameClicked = req.params.customListName
     List.findOne({ name_list: customListNameClicked }).then(foundList => {
+        console.log("ListFindOne")
         if (!foundList) {
-            console.log('no list found')
+            console.log('no list found', customListNameClicked)
+
         } else {
+            console.log("inside else")
             res.render("pages/index.ejs", { listName: foundList.name_list, newListItem: foundList.items, findAll })
         }
     })

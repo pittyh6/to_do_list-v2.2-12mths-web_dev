@@ -25,4 +25,6 @@ function getClickedElementPage(elementSelectedPage) {
 }
 function getWriteDownElement(fieldInputText){
     console.log("text input on input field: ", fieldInputText)
+    window.location.href="http://localhost:3000/"+fieldInputText
+    return fieldInputText
 }

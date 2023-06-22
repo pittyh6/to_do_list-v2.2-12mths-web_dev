@@ -39,15 +39,17 @@ btn_delete.forEach(btnDelete => {
     })
 })
 
+//select the Create List button 
+btn_create[0].addEventListener('click', function(){
+    getWriteDownElement(input_create_new_list.value)
+})
+
+
 //select the Add item to the list button
 btn_add[0].addEventListener('click', function(){
     console.log("add button clicked")
 })
 
-//select the Create List button 
-btn_create[0].addEventListener('click', function(){
-    getWriteDownElement(input_create_new_list.value)
-})
 
 //select the Download List button
 btn_download_list[0].addEventListener('click', function(){
