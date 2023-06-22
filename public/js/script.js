@@ -24,11 +24,3 @@ function getClickedElementPage(elementSelectedPage) {
     }
 }
 
-function deleteButtonPage(){
-    window.onclick = e => {
-        let deleteButtonClicked = e.target.innerText
-        console.log('which delete button: ', deleteButtonClicked)
-        
-    }
-}
-
