@@ -6,6 +6,8 @@ let btn_add = $(".btn-add")
 let btn_create_new_list = $(".btn-create-new-list")
 let btn_download_list = $(".btn-download-list")
 let btn_create = $(".btn-create")
+let input_create_new_list = document.querySelector('.input-new-list')
+let input_add_item = $('.input-item-to-list')
 
 //hide elements
 let nav_list_group = $(".nav-list-group")
@@ -44,7 +46,7 @@ btn_add[0].addEventListener('click', function(){
 
 //select the Create List button 
 btn_create[0].addEventListener('click', function(){
-    console.log("create new list button clicked")
+    getWriteDownElement(input_create_new_list.value)
 })
 
 //select the Download List button
