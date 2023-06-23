@@ -55,10 +55,8 @@ app.get('/', function (req, res) {
 
 //custom route
 app.get('/:customListName', function (req, res) {
-    console.log("inside custom")
     const customListNameClicked = req.params.customListName
     List.findOne({ name_list: customListNameClicked }).then(foundList => {
-        console.log("ListFindOne")
         if (customListNameClicked === 'favicon.ico') {
             return res.sendStatus(204); // Send a No Content response for favicon.ico requests
         }if (!foundList) {
@@ -69,9 +67,8 @@ app.get('/:customListName', function (req, res) {
                 items: [],
             });
             newListCreating.save()
-
+            res.render("pages/index.ejs", { listName: findAll[0].name_list, newListItem: findAll[0].items, findAll })
         } else {
-            console.log("inside else")
             res.render("pages/index.ejs", { listName: foundList.name_list, newListItem: foundList.items, findAll })
         }
     })
