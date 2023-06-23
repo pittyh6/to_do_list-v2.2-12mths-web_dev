@@ -6,9 +6,6 @@ const app = express();
 //const bodyParser = require('body-parser');
 import bodyParser from 'body-parser';
 
-/*-------------------------import variables-----------------------------*/
-// import {textElementClicked} from './public/js/script'
-
 /*-----------------------------DATABASE---------------------------------*/
 //connect mongodb with mongoose
 //const mongoose = require('mongoose')
@@ -33,18 +30,6 @@ const todoList = new List({
 const findAll = await List.find({})
 console.log("find all: ", findAll)
 export { findAll }
-/*
-//find first element
-const findOne = await List.findOne({})
-console.log("find one: ", findOne)
-//return all lists by the name of the list
-const findAllByNameList = await List.find({name_list:"to do list"})
-console.log("find all by name list: ", findAllByNameList);
-//return a specific field from db (name_list)
-const findFieldName = await List.find({}).select('name_list -_id')
-console.log("find by field name -id: ", findFieldName)
-*/
-
 
 
 /*---------------------------------------------------------------------*/
