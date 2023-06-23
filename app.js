@@ -59,8 +59,16 @@ app.get('/:customListName', function (req, res) {
     const customListNameClicked = req.params.customListName
     List.findOne({ name_list: customListNameClicked }).then(foundList => {
         console.log("ListFindOne")
-        if (!foundList) {
+        if (customListNameClicked === 'favicon.ico') {
+            return res.sendStatus(204); // Send a No Content response for favicon.ico requests
+        }if (!foundList) {
             console.log('no list found', customListNameClicked)
+            //creating new list passing the name on the input
+            const newListCreating = new List({
+                name_list: customListNameClicked,
+                items: [],
+            });
+            newListCreating.save()
 
         } else {
             console.log("inside else")
