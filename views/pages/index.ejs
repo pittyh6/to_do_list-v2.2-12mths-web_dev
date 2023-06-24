@@ -12,15 +12,19 @@
 
             <!-- Add item(s) to the list -->
             <main class="sec-elements-list">
+                <!-- <h1 class="page-header-list-name"><%= newListItem.name_list %></h1> -->
+                <h1 class="page-header-list-name"><%= listName %></h1>
                 <section class="sec-insert-items-to-list">
                     <input type="text" name="item-to-list" id="input-item-list" class="input-item-to-list">
                     <button type="submit" class="btn-add">Add</button>
                 </section>
                 <section class="sec-return-items-to-list">
                     <% for(let i=0; i < newListItem.length; i++) { %>
-                        <p class="item-list"><%= newListItem[i] %></p>
+                        <p class="item-list">
+                            <%= newListItem[i] %>
+                        </p>
                         <button class="btn-delete">Delete</button>
-                    <% } %>
+                        <% } %>
                 </section>
             </main>
 
