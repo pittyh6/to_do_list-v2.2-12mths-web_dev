@@ -76,6 +76,7 @@ p:hover {
   transform: scale(1.01);
 }
 
+
 /* ----------------- NavBar ---------------------------*/
 .nav-lists {
   background-color: var(--bg-light-red);
@@ -97,6 +98,13 @@ p:hover {
 } */
 
 /* ----------------- Main ---------------------------*/
+/* z-index -1 */
+.input-item-to-list,
+.sec-return-items-to-list,
+.buttons-create-download-list {
+  position: relative;
+  z-index: -1;
+}
 /* main - Add Items */
 .container > .sec-elements-list {
   margin-top: -135px;
@@ -109,15 +117,11 @@ p:hover {
 .input-item-to-list {
   width: 100%;
   background-color: var(--light-green);
-  position: relative;
-  z-index: -1;
 }
 /* main - return items */
 .sec-return-items-to-list {
   display: grid;
   grid-template-columns: 80% 20%;
-  z-index: -1;
-  position: relative;
 }
 .item-list {
   background-color: var(--dark-purple);
