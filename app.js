@@ -66,13 +66,7 @@ app.get('/:customListName', function (req, res) {
                 items: [],
             });
             newListCreating.save()
-            /*
-            const reloadFindAll = List.find({})
-            console.log("reload find all: ", reloadFindAll)
-            res.render("pages/index.ejs", { listName: reloadFindAll[0].name_list, newListItem: reloadFindAll[0].items, reloadFindAll })
-            */
             List.find({}).exec().then(findAll => {
-                console.log("reload find All: ", findAll)
                 res.render("pages/index.ejs", {listName: findAll[0].name_list, newListItem: findAll[0].items, findAll})
             })
             .catch(error => {
