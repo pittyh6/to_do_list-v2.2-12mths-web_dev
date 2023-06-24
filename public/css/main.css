@@ -23,9 +23,11 @@ input {
 /*show and hide classes*/
 .invisible {
   visibility: hidden;
+  max-height: 190px;
 }
 .visible {
   visibility: visible;
+  max-height: 190px;
 }
 
 /*BUTTONS*/
@@ -38,6 +40,8 @@ input {
 }
 .btn-add {
   background-color: var(--dark-green);
+  position: relative;
+  z-index: -1;
 }
 .btn-create-new-list,
 .btn-download-list {
@@ -94,8 +98,8 @@ p:hover {
 
 /* ----------------- Main ---------------------------*/
 /* main - Add Items */
-.container>.sec-elements-list{
-  margin-top: -120px;
+.container > .sec-elements-list {
+  margin-top: -135px;
 }
 .sec-insert-items-to-list {
   display: grid;
@@ -105,6 +109,8 @@ p:hover {
 .input-item-to-list {
   width: 100%;
   background-color: var(--light-green);
+  position: relative;
+  z-index: -1;
 }
 /* main - return items */
 .sec-return-items-to-list {
