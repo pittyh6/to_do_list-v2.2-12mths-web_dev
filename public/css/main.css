@@ -112,7 +112,7 @@ p:hover {
 }
 /* main - Add Items */
 .container > .sec-elements-list {
-  margin-top: -135px;
+  margin-top: -25px;
 }
 .sec-insert-items-to-list {
   display: grid;
