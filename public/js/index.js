@@ -8,6 +8,7 @@ let btn_download_list = $(".btn-download-list")
 let btn_create = $(".btn-create")
 let input_create_new_list = document.querySelector('.input-new-list')
 let input_add_item = $('.input-item-to-list')
+let page_header_list_name = document.querySelector('.page-header-list-name')
 
 //hide elements
 let nav_list_group = $(".nav-list-group")
@@ -43,6 +44,8 @@ btn_delete.forEach(btnDelete => {
         console.log('elementSelectedList: ', elementSelectedList)
         const textElementSelectedList = elementSelectedList.textContent
         console.log('textElementSelectedList: ', textElementSelectedList)
+        const getNameList = page_header_list_name.textContent
+        console.log('TextListName: ',getNameList)
     })
 })
 
