@@ -7,7 +7,7 @@ let btn_create_new_list = $(".btn-create-new-list")
 let btn_download_list = $(".btn-download-list")
 let btn_create = $(".btn-create")
 let input_create_new_list = document.querySelector('.input-new-list')
-let input_add_item = $('.input-item-to-list')
+let input_add_item_to_list = document.querySelector('.input-item-to-list')
 let page_header_list_name = document.querySelector('.page-header-list-name')
 
 //hide elements
@@ -22,7 +22,6 @@ btn_create_new_list[0].addEventListener('click', function(){
     hide_show(field_create_list)
 })
 
-
 //selected nav-bar list name
 nav_lists[0].addEventListener("click",function(){
     const navListTitleClass = "nav-list-title"
@@ -34,6 +33,16 @@ btn_create[0].addEventListener('click', function(){
     console.log("create new list button clicked")
     getWriteDownElement(input_create_new_list.value)
 })
+
+//select the Add item to the list button
+btn_add[0].addEventListener('click', function(){
+    console.log("add button clicked")
+    const input_add_item_text = input_add_item_to_list.value
+    console.log(" item text: ", input_add_item_text)
+})
+
+
+
 
 
 //select the delete button
@@ -48,14 +57,6 @@ btn_delete.forEach(btnDelete => {
         console.log('TextListName: ',getNameList)
     })
 })
-
-
-
-//select the Add item to the list button
-btn_add[0].addEventListener('click', function(){
-    console.log("add button clicked")
-})
-
 
 //select the Download List button
 btn_download_list[0].addEventListener('click', function(){
