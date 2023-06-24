@@ -71,6 +71,7 @@ app.get('/:customListName', function (req, res) {
             newListCreating.save()
             //to show all the new information on db mongoose
             List.find({}).exec().then(findAll => {
+                console.log(findAll)
                 res.render("pages/index.ejs", {listName: findAll[0].name_list, newListItem: findAll[0].items, findAll})
             })
             .catch(error => {

@@ -28,6 +28,13 @@ nav_lists[0].addEventListener("click",function(){
     getClickedElementPage(navListTitleClass)
 })
 
+//select the Create List button 
+btn_create[0].addEventListener('click', function(){
+    console.log("create new list button clicked")
+    getWriteDownElement(input_create_new_list.value)
+})
+
+
 //select the delete button
 btn_delete.forEach(btnDelete => {
     btnDelete.addEventListener('click', event => {
@@ -39,10 +46,6 @@ btn_delete.forEach(btnDelete => {
     })
 })
 
-//select the Create List button 
-btn_create[0].addEventListener('click', function(){
-    getWriteDownElement(input_create_new_list.value)
-})
 
 
 //select the Add item to the list button

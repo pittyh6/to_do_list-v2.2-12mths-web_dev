@@ -40,8 +40,6 @@ input {
 }
 .btn-add {
   background-color: var(--dark-green);
-  position: relative;
-  z-index: -1;
 }
 .btn-create-new-list,
 .btn-download-list {
@@ -76,7 +74,6 @@ p:hover {
   transform: scale(1.01);
 }
 
-
 /* ----------------- NavBar ---------------------------*/
 .nav-lists {
   background-color: var(--bg-light-red);
@@ -92,7 +89,7 @@ p:hover {
 .nav-list-title {
   background-color: var(--light-purple);
   color: var(--bg-light-rose);
-  text-shadow: 0px 0px 6px rgba(206,89,55,0.65);
+  text-shadow: 0px 0px 6px rgba(206, 89, 55, 0.65);
 }
 
 /* .page-header-list-name {
@@ -100,12 +97,18 @@ p:hover {
 } */
 
 /* ----------------- Main ---------------------------*/
-/* z-index -1 */
+/* z-index 0 */
+.btn-add,
 .input-item-to-list,
 .sec-return-items-to-list,
 .buttons-create-download-list {
   position: relative;
-  z-index: -1;
+  z-index: 0;
+}
+/* z-index 1 */
+.dropbox-lists{
+  position: relative;
+  z-index: 1;
 }
 /* main - Add Items */
 .container > .sec-elements-list {
