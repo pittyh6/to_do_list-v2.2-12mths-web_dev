@@ -17,7 +17,7 @@ button {
   border-style: none;
   background-color: transparent;
 }
-input{
+input {
   text-indent: 30px;
 }
 /*show and hide classes*/
@@ -56,7 +56,7 @@ input{
 .btn-download-list,
 .nav-list-title,
 .input-item-to-list,
-.input-new-list{
+.input-new-list {
   height: 30px;
 }
 
@@ -94,6 +94,9 @@ p:hover {
 
 /* ----------------- Main ---------------------------*/
 /* main - Add Items */
+.container>.sec-elements-list{
+  margin-top: -120px;
+}
 .sec-insert-items-to-list {
   display: grid;
   grid-template-columns: 80% 20%;
@@ -107,13 +110,15 @@ p:hover {
 .sec-return-items-to-list {
   display: grid;
   grid-template-columns: 80% 20%;
+  z-index: -1;
+  position: relative;
 }
 .item-list {
   background-color: var(--dark-purple);
 }
 
 /* --------- Sec. create and Download list ----------*/
-.sec-create-download-list{
+.sec-create-download-list {
   margin-top: 20px;
 }
 /*buttons*/
@@ -125,10 +130,10 @@ p:hover {
   margin: 20px;
 }
 /*create list field*/
-.field-create-list{
+.field-create-list {
   display: grid;
   grid-template-columns: 80% 20%;
 }
-.input-new-list{
+.input-new-list {
   background-color: var(--light-input-list);
 }

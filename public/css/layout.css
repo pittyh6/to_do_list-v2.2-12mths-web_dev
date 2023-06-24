@@ -48,6 +48,11 @@ body {
     height: 50px;
   }
 
+  /* --------- Main Section ----------*/
+  .container>.sec-elements-list{
+    margin-top: -140px;
+  }
+
   /* --------- Sec. create and Download list ----------*/
   .sec-create-download-list {
     margin-top: 40px;
@@ -103,6 +108,11 @@ body {
   } */
   .page-header-list-name {
     margin-top: 55px;
+  }
+
+  /* --------- Main Section ----------*/
+  .container>.sec-elements-list{
+    margin-top: -200px;
   }
 
   /* --------- Sec. create and Download list ----------*/
