@@ -69,15 +69,6 @@ app.get('/:customListName', function (req, res) {
                 items: [],
             });
             newListCreating.save()
-            // //to show all the new information on db mongoose
-            // List.find({}).exec().then(findAll => {
-            //     console.log("findALl inside the new list created: ", findAll)
-            //     res.render("pages/index.ejs", {listName: findAll[0].name_list, newListItem: findAll[0].items, findAll})
-            // })
-            // .catch(error => {
-            //     console.log("Error retrieving documents: ", error)
-            // })
-
         } else {
             //res.render("pages/index.ejs", { listName: foundList.name_list, newListItem: foundList.items, findAll })
             List.find({}).exec().then(findAll => {
