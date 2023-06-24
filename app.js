@@ -28,7 +28,6 @@ const todoList = new List({
 
 //find all elements
 const findAll = await List.find({})
-console.log("find all: ", findAll)
 export { findAll }
 
 
@@ -59,7 +58,7 @@ app.get('/:customListName', function (req, res) {
     List.findOne({ name_list: customListNameClicked }).then(foundList => {
         if (customListNameClicked === 'favicon.ico') {
             return res.sendStatus(204); // Send a No Content response for favicon.ico requests
-        }if (!foundList) {
+        } if (!foundList) {
             console.log('no list found', customListNameClicked)
             //creating new list passing the name on the input
             const newListCreating = new List({
@@ -67,7 +66,18 @@ app.get('/:customListName', function (req, res) {
                 items: [],
             });
             newListCreating.save()
-            res.render("pages/index.ejs", { listName: findAll[0].name_list, newListItem: findAll[0].items, findAll })
+            /*
+            const reloadFindAll = List.find({})
+            console.log("reload find all: ", reloadFindAll)
+            res.render("pages/index.ejs", { listName: reloadFindAll[0].name_list, newListItem: reloadFindAll[0].items, reloadFindAll })
+            */
+            List.find({}).exec().then(findAll => {
+                console.log("reload find All: ", findAll)
+                res.render("pages/index.ejs", {listName: findAll[0].name_list, newListItem: findAll[0].items, findAll})
+            })
+            .catch(error => {
+                console.log("Error retrieving documents: ", error)
+            })
         } else {
             res.render("pages/index.ejs", { listName: foundList.name_list, newListItem: foundList.items, findAll })
         }
