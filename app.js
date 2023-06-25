@@ -93,11 +93,6 @@ app.get('/:customListName', function (req, res) {
 app.post("/", function (req, res) {
     const itemName = req.body.newItem
     const listName = req.body.list
-    // const item = new Item({ 
-    //     name: itemName
-    // })
-    console.log("list name post: ", listName)
-    console.log("item name post:", itemName)
     List.findOne({ name_list: listName }).then(foundList => {
         console.log("founded list post: ", foundList)
         if(!foundList){
