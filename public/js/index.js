@@ -36,9 +36,12 @@ btn_create[0].addEventListener('click', function(){
 
 //select the Add item to the list button
 btn_add[0].addEventListener('click', function(){
-    console.log("add button clicked")
+    //input text
     const input_add_item_text = input_add_item_to_list.value
     console.log(" item text: ", input_add_item_text)
+    //list name
+    const list_name = page_header_list_name
+    console.log("page header list name: ",list_name.textContent )
 })
 
 
