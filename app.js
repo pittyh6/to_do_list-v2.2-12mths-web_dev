@@ -100,6 +100,21 @@ app.post("/", function (req, res) {
     console.log("item name post:", itemName)
     List.findOne({ name_list: listName }).then(foundList => {
         console.log("founded list post: ", foundList)
+        if(!foundList){
+            console.log("List not found: ", listName)
+            return res.sendStatus(404)
+        }
+        foundList.items.push(itemName)
+        foundList.save().then(savedList => {
+            console.log("Item added to list: ", savedList)
+            res.redirect("/"+listName)
+        }).catch(error => {
+            console.error("Error saving List: ", error)
+            res.status(500).send("Internal Server Error....")
+        })
+    }).catch(error => {
+        console.error("Error finding list: ", error)
+        res.status(500).send("Internal Server Error.." )
     })
 })
 
