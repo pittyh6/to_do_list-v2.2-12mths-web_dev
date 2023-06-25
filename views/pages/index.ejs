@@ -15,8 +15,10 @@
                 <!-- <h1 class="page-header-list-name"><%= newListItem.name_list %></h1> -->
                 <h1 class="page-header-list-name"><%= listName %></h1>
                 <section class="sec-insert-items-to-list">
-                    <input type="text" name="item-to-list" id="input-item-list" class="input-item-to-list">
-                    <button type="submit" class="btn-add">Add</button>
+                    <form action="/"  class="item" method="post">
+                        <input type="text" name="newItem" id="input-item-list" class="input-item-to-list">
+                        <button type="submit" name="list" value="<%= listName %>" class="btn-add">Add</button>
+                    </form>
                 </section>
                 <section class="sec-return-items-to-list">
                     <% for(let i=0; i < newListItem.length; i++) { %>
