@@ -34,10 +34,6 @@ input {
 .btn-delete {
   background-color: var(--dark-red);
 }
-.btn-delete:hover {
-  color: var(--light-text);
-  transform: scale(1.01);
-}
 .btn-add {
   background-color: var(--dark-green);
 }
@@ -60,6 +56,18 @@ input {
 .input-item-to-list,
 .input-new-list {
   height: 30px;
+}
+/*hovers*/
+.btn-delete:hover,
+.btn-add:hover,
+.nav-lists:hover{
+  color: var(--light-text);
+  transform: scale(1.01);
+}
+.btn-create-new-list:hover,
+.btn-download-list:hover{
+  color: var(--dark-green);
+  transform: scale(1.01);
 }
 
 /*reused*/
