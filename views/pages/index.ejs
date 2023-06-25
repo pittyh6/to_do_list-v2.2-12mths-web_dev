@@ -14,12 +14,12 @@
             <main class="sec-elements-list">
                 <!-- <h1 class="page-header-list-name"><%= newListItem.name_list %></h1> -->
                 <h1 class="page-header-list-name"><%= listName %></h1>
-                <section class="sec-insert-items-to-list">
-                    <form action="/"  class="item" method="post">
+                <form action="/"  class="item" method="post">
+                        <section class="sec-insert-items-to-list">
                         <input type="text" name="newItem" id="input-item-list" class="input-item-to-list">
                         <button type="submit" name="list" value="<%= listName %>" class="btn-add">Add</button>
-                    </form>
-                </section>
+                    </section>
+                </form>
                 <section class="sec-return-items-to-list">
                     <% for(let i=0; i < newListItem.length; i++) { %>
                         <p class="item-list"><%= newListItem[i] %></p>
