@@ -20,8 +20,10 @@
                         <button type="submit" name="list" value="<%= listName %>" class="btn-add">Add</button>
                     </section>
                 </form>
+                
                 <form action="/deleteItem" method="post" id="deleteItemForm">
                     <section class="sec-return-items-to-list">
+                        <!-- using the input to pass the list name to the app.js app.post("/deleteItem") -->
                         <input type="hidden" name="list" value="<%= listName %>">
                         <% for(let i=0; i < newListItem.length; i++) { %>
                             <p class="item-list"><%= newListItem[i] %></p>
