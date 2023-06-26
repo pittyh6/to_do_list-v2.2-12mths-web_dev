@@ -113,7 +113,9 @@ app.post("/", function (req, res) {
     })
 })
 
-
+app.post("/deleteItem", function(req,res){
+    
+})
 
 //start server
 const PORT = process.env.PORT || 3000
