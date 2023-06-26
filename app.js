@@ -95,29 +95,47 @@ app.post("/", function (req, res) {
     const listName = req.body.list
     List.findOne({ name_list: listName }).then(foundList => {
         console.log("founded list post: ", foundList)
-        if(!foundList){
+        if (!foundList) {
             console.log("List not found: ", listName)
             return res.sendStatus(404)
         }
         foundList.items.push(itemName)
         foundList.save().then(savedList => {
             console.log("Item added to list: ", savedList)
-            res.redirect("/"+listName)
+            res.redirect("/" + listName)
         }).catch(error => {
             console.error("Error saving List: ", error)
             res.status(500).send("Internal Server Error....")
         })
     }).catch(error => {
         console.error("Error finding list: ", error)
-        res.status(500).send("Internal Server Error.." )
+        res.status(500).send("Internal Server Error..")
     })
 })
 
-app.post("/deleteItem", function(req,res){
+app.post("/deleteItem", async function (req, res) {
     const itemName = req.body.itemList
     const listName = req.body.list
     console.log("List of item to be deleted: ", listName)
     console.log("Item deleted: ", itemName)
+    
+    try {
+        const updateList = await List.findOneAndUpdate(
+            { name_list: listName },
+            { $pull: { items: itemName } },
+            { new: true }
+        ).exec();
+        if (!updateList) {
+            console.log("List not found: ", updateList)
+            return res.sendStatus(404)
+        }
+        console.log("Updated list: ", updateList)
+        res.redirect("/" + updateList)
+    } catch (error) {
+        console.log("Error deleting item: ", error)
+        res.redirect("/")
+        return res.sendStatus(500)
+    }
 })
 
 //start server
