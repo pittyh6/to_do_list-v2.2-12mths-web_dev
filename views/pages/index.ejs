@@ -20,11 +20,12 @@
                         <button type="submit" name="list" value="<%= listName %>" class="btn-add">Add</button>
                     </section>
                 </form>
-                <form action="/deleteItem" method="post">
+                <form action="/deleteItem" method="post" id="deleteItemForm">
                     <section class="sec-return-items-to-list">
+                        <input type="hidden" name="list" value="<%= listName %>">
                         <% for(let i=0; i < newListItem.length; i++) { %>
-                            <p class="item-list" name="item"><%= newListItem[i] %></p>
-                            <button class="btn-delete" name="list" value="<%= listName %>">Delete</button>
+                            <p class="item-list"><%= newListItem[i] %></p>
+                            <button class="btn-delete" name="itemList" value="<%= newListItem[i] %>">Delete</button>
                             <% } %>
                     </section>
                 </form>

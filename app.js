@@ -114,7 +114,10 @@ app.post("/", function (req, res) {
 })
 
 app.post("/deleteItem", function(req,res){
-    
+    const itemName = req.body.itemList
+    const listName = req.body.list
+    console.log("List of item to be deleted: ", listName)
+    console.log("Item deleted: ", itemName)
 })
 
 //start server
