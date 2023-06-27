@@ -126,11 +126,11 @@ app.post("/deleteItem", async function (req, res) {
             { new: true }
         ).exec();
         if (!updateList) {
-            console.log("List not found: ", updateList)
+            console.log("List not found: ", listName)
             return res.sendStatus(404)
         }
         console.log("Updated list: ", updateList)
-        res.redirect("/" + updateList)
+        res.redirect("/" + listName)
     } catch (error) {
         console.log("Error deleting item: ", error)
         res.redirect("/")
