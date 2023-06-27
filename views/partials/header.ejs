@@ -1,12 +1,14 @@
 <nav>
     <div class="dropbox-lists">
         <input type="button" class="nav-lists" value="Lists">
-        <div class="nav-list-group invisible">
-            <% for(let i = 0; i < findAll.length; i++) { %>
-            <p class="nav-list-title"><%= findAll[i].name_list %></p> 
-            <button class="btn-delete">Delete</button>
-            <% } %>
-        </div>
+        <form action="/deleteList" method="post" id="deleteListForm" class="deleteListFormClass">
+            <div class="nav-list-group invisible">
+                <% for(let i = 0; i < findAll.length; i++) { %>
+                <p class="nav-list-title"><%= findAll[i].name_list %></p> 
+                <button class="btn-delete">Delete</button>
+                <% } %>
+            </div>
+        </form>
         <!-- <h1 class="page-header-list-name"><%= newListItem.name_list %></h1> -->
         <!-- <h1 class="page-header-list-name"><%= listName %></h1> -->
     </div>

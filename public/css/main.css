@@ -60,12 +60,12 @@ input {
 /*hovers*/
 .btn-delete:hover,
 .btn-add:hover,
-.nav-lists:hover{
+.nav-lists:hover {
   color: var(--light-text);
   transform: scale(1.01);
 }
 .btn-create-new-list:hover,
-.btn-download-list:hover{
+.btn-download-list:hover {
   color: var(--dark-green);
   transform: scale(1.01);
 }
@@ -114,12 +114,15 @@ p:hover {
   z-index: 0;
 }
 /* z-index 1 */
-.dropbox-lists{
+.dropbox-lists {
   position: relative;
   z-index: 1;
   height: 100px;
 }
 /* main - Add Items */
+.deleteListFormClass {
+  height: 0px;
+}
 .container > .sec-elements-list {
   margin-top: -25px;
 }
