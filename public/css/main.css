@@ -30,6 +30,14 @@ input {
   max-height: 190px;
 }
 
+/*mark task as done or undone*/
+.done-task{
+  text-decoration: line-through;
+}
+.undone-task{
+  text-decoration: none;
+}
+
 /*BUTTONS*/
 .btn-delete {
   background-color: var(--dark-red);

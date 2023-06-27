@@ -28,3 +28,17 @@ function getWriteDownElement(fieldInputText){
     window.location.href="http://localhost:3000/"+fieldInputText
     return fieldInputText
 }
+
+window.onclick = event => {
+    console.log(event.target);
+    const target = event.target;
+    if (target.classList.contains("item-list") && target.classList.contains("undone-task")) {
+        target.classList.remove("undone-task");
+        target.classList.add("done-task");
+    } else if (target.classList.contains("item-list") && target.classList.contains("done-task")) {
+        target.classList.remove("done-task");
+        target.classList.add("undone-task");
+    } else {
+        console.log("It is not an item:", target);
+    }
+}

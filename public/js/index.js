@@ -34,6 +34,7 @@ btn_create[0].addEventListener('click', function(){
     getWriteDownElement(input_create_new_list.value)
 })
 
+/*
 //select the Add item to the list button
 btn_add[0].addEventListener('click', function(){
     //input text
@@ -65,3 +66,4 @@ btn_delete.forEach(btnDelete => {
 btn_download_list[0].addEventListener('click', function(){
     console.log('btn_download_list clicked')
 })
+*/
