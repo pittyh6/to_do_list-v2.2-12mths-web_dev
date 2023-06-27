@@ -47,19 +47,16 @@ app.use(bodyParser.urlencoded({ extended: true }))
 //Server Static Files
 app.use(express.static('public'))
 
-//Define routes
+//Define routes -> redirect to home page when open website
 app.get('/', function (req, res) {
-    // res.render("pages/index.ejs", {listName: findAll[0].name_list, newListItem: findAll[0].items, findAll })
     List.find({}).exec().then(findAll => {
         res.render("pages/index.ejs", { listName: findAll[0].name_list, newListItem: findAll[0].items, findAll })
     })
 })
 
-//custom route
+//custom route - redirect to the list when clicked on navbar
 app.get('/:customListName', function (req, res) {
     const customListNameClicked = req.params.customListName
-    // const itemName = req.params.newItem
-    // const listName = req.params.list
 
     List.findOne({ name_list: customListNameClicked }).then(foundList => {
         if (customListNameClicked === 'favicon.ico') {
@@ -73,7 +70,6 @@ app.get('/:customListName', function (req, res) {
             });
             newListCreating.save()
         } else {
-            //res.render("pages/index.ejs", { listName: foundList.name_list, newListItem: foundList.items, findAll })
             List.find({}).exec().then(findAll => {
                 res.render("pages/index.ejs", { listName: foundList.name_list, newListItem: foundList.items, findAll })
             })
@@ -90,6 +86,7 @@ app.get('/:customListName', function (req, res) {
 
 })
 
+// Add item -> Add new item to the list selected
 app.post("/", function (req, res) {
     const itemName = req.body.newItem
     const listName = req.body.list
@@ -113,6 +110,7 @@ app.post("/", function (req, res) {
     })
 })
 
+//delete item -> delete item from the selected list
 app.post("/deleteItem", async function (req, res) {
     const itemName = req.body.itemList
     const listName = req.body.list
@@ -137,6 +135,8 @@ app.post("/deleteItem", async function (req, res) {
         return res.sendStatus(500)
     }
 })
+
+//delete list -> delete list selecting on the navbar
 
 //start server
 const PORT = process.env.PORT || 3000
