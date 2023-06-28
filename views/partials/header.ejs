@@ -5,7 +5,9 @@
             <div class="nav-list-group invisible">
                 <% for(let i = 0; i < findAll.length; i++) { %>
                 <p class="nav-list-title"><%= findAll[i].name_list %></p> 
-                <button class="btn-delete">Delete</button>
+                <input type="hidden" name="list" value="<%= findAll[i].name_list %>">
+                <!-- <button class="btn-delete">Delete</button> -->
+                <button class="btn-delete" data-list="<%= findAll[i].name_list %>">Delete</button>
                 <% } %>
             </div>
         </form>

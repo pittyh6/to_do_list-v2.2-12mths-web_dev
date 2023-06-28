@@ -137,6 +137,10 @@ app.post("/deleteItem", async function (req, res) {
 })
 
 //delete list -> delete list selecting on the navbar
+app.post("/deleteList", async function(req,res){
+    const listName = req.body.list
+    console.log("list name to delete on nav: ", listName)
+})
 
 
 //start server
