@@ -14,7 +14,6 @@ function getClickedElementPage(elementSelectedPage) {
     window.onclick = e => {
         textElementClicked = e.target.innerText
         if ($(e.target).hasClass(elementSelectedPage) == true) {
-            console.log(textElementClicked)
             window.location.href="http://localhost:3000/"+textElementClicked
             return textElementClicked
         } else {
@@ -24,13 +23,11 @@ function getClickedElementPage(elementSelectedPage) {
     }
 }
 function getWriteDownElement(fieldInputText){
-    console.log("text input on input field: ", fieldInputText)
     window.location.href="http://localhost:3000/"+fieldInputText
     return fieldInputText
 }
 
 window.onclick = event => {
-    console.log(event.target);
     const target = event.target;
     if (target.classList.contains("item-list") && target.classList.contains("undone-task")) {
         target.classList.remove("undone-task");
