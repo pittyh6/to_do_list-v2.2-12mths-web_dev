@@ -140,6 +140,23 @@ app.post("/deleteItem", async function (req, res) {
 app.post("/deleteList", async function(req,res){
     const listName = req.body.list
     console.log("list name to delete on nav: ", listName)
+    try{
+        const deleteList = await List.deleteOne(
+            {name_list: listName},
+            {$pull: {name_list: listName}},
+            {new: true}
+        ).exec()
+        if(!deleteList){
+            console.log("List not found: ", listName)
+            return res.sendStatus(404)
+        }
+        console.log("Deleted list: ", deleteList)
+        res.redirect("/")
+    }catch(error){
+        console.log("Error deleting list: ", error)
+        res.redirect("/")
+        return res.sendStatus(500)
+    }
 })
 
 
