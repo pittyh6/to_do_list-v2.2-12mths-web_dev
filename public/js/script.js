@@ -40,6 +40,7 @@ window.onclick = event => {
     }
 }
 
-function downloadList(){
-    
+function downloadList(list, items){
+    console.log("the list name: ", list)
+    console.log("the array: ", items)
 }

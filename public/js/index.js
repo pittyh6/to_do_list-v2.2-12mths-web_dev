@@ -44,7 +44,5 @@ btn_download_list[0].addEventListener('click', function(){
     for(let i = 0; i <= item_list.length-1 ; i++){
         itemsArray.push(item_list[i].textContent)
     }
-    console.log("the array: ", itemsArray)
-    console.log("the list name: ", listName)
-
+    downloadList(listName, itemsArray)
 })
