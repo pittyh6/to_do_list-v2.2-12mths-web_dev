@@ -36,8 +36,8 @@ btn_create[0].addEventListener('click', function(){
     getWriteDownElement(input_create_new_list.value)
 })
 
-
-//select the Download List button
+/*
+// Download List - button using html text
 btn_download_list[0].addEventListener('click', function(){
     const itemsArray = []
     let listName = document.querySelector(".page-header-list-name").textContent
@@ -45,4 +45,60 @@ btn_download_list[0].addEventListener('click', function(){
         itemsArray.push(item_list[i].textContent + '\n')
     }
     downloadList(listName, itemsArray)
+})
+*/
+
+//Download list using mongoose
+/*btn_download_list[0].addEventListener("click", function(){
+    let listName = document.querySelector(".page-header-list-name").textContent
+    console.log("listName: ",listName )
+    if(listName){
+        fetch('/downloadList',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({listName: listName})
+        })
+        .then(response => {
+            console.log("Ebbaaaaaaa")
+            return listName
+        })
+        .catch(error => {
+            console.log("error on download list: ", error)
+        })
+    }
+})
+btn_download_list[0].addEventListener("click", function(){
+    let listNameElement = document.getElementById("list-name");
+    console.log("List name to download FIRST:", listName);
+    if (listNameElement) {
+        let listName = listNameElement.textContent.trim();
+        console.log("List name to download:", listName);
+
+        fetch('/downloadList', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ listName: listName })
+        }).then(response => {
+            response.json()
+            console.log("Download list response:", response);
+            // Handle the response as needed
+        })
+        .catch(error => {
+            console.log("Error on download list:", error);
+            // Handle the error
+        });
+    }else{
+        console.log("Error on download list:");
+    }
+});
+*/
+
+//Download list using mongoose
+btn_download_list[0].addEventListener("click", function(){
+    let listName = document.querySelector(".page-header-list-name").textContent
+    downloadList(listName)
 })

@@ -46,6 +46,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 //Server Static Files
 app.use(express.static('public'))
+app.use(express.json())
 
 //Define routes -> redirect to home page when open website
 app.get('/', function (req, res) {
@@ -157,6 +158,23 @@ app.post("/deleteList", async function(req,res){
         res.redirect("/")
         return res.sendStatus(500)
     }
+})
+/*
+// Download list
+app.post("/downloadList", async function(req, res){
+    const list = req.body.list;
+    const datas = req.body.data
+    console.log("List name to download:", list);
+    console.log("Datas name to download:", datas);
+    
+    const data = {list: list, someOtherData: "others" }
+    console.log(data)
+    res.json(data)
+});
+*/
+
+app.post("/downloadList", (request, response) => {
+    console.log("request", request.body)
 })
 
 

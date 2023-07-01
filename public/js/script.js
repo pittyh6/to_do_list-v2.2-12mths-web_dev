@@ -14,7 +14,7 @@ function getClickedElementPage(elementSelectedPage) {
     window.onclick = e => {
         textElementClicked = e.target.innerText
         if ($(e.target).hasClass(elementSelectedPage) == true) {
-            window.location.href="http://localhost:3000/"+textElementClicked
+            window.location.href = "http://localhost:3000/" + textElementClicked
             return textElementClicked
         } else {
             //console.log("doesn't have the class/element ", elementSelectedPage)
@@ -22,8 +22,8 @@ function getClickedElementPage(elementSelectedPage) {
         }
     }
 }
-function getWriteDownElement(fieldInputText){
-    window.location.href="http://localhost:3000/"+fieldInputText
+function getWriteDownElement(fieldInputText) {
+    window.location.href = "http://localhost:3000/" + fieldInputText
     return fieldInputText
 }
 
@@ -40,6 +40,8 @@ window.onclick = event => {
     }
 }
 
+/*
+//download list using html content
 function downloadList(list, items){
     const file = new File(items, list+ '.text', {
         type: 'text/plain',
@@ -55,4 +57,77 @@ function downloadList(list, items){
 
     document.body.removeChild(link)
     window.URL.revokeObjectURL(url)
+}
+
+async function downloadList(list) {
+    if (list) {
+        console.log("Downloading list name::: ", list)
+        const textListName = list
+        const res = await fetch('/downloadList', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ list: list })
+        })
+        .then(list => {
+            console.log("Download list response:", textListName);
+            return textListName
+            // Handle the response as needed
+        }).then(data => {
+            console.log("Download data: ", data)
+            return data
+        })
+            .catch(error => {
+                console.log("Error on download list:", error);
+                // Handle the error
+            });
+    } else {
+        console.log("Error on download list.....");
+    }
+}
+
+async function downloadList(list){
+    if(list){
+        console.log("Downloading list name: ", list)
+        try{
+            const response = await fetch('/downloadList', {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({list: list})
+            })
+            if(response.ok){
+                const data = await list
+                //const data = await response.json()
+                console.log("data: ", data)
+                //console.log("Download data: ", data.list)
+                return data
+                //return data.list
+            }else{
+                console.log("Error on download list: ", response.status)
+            }
+        }catch(error){
+            console.log("Error ibn download list created: ", error)
+        }
+    }else{
+        console.log("Error on download list: List name is empty.");
+    }
+}
+*/
+function downloadList(list) {
+    console.log("Download list name: ", list)
+    const data = {list}
+    console.log("data object: ", data)
+
+    const options = {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify(data)
+    }
+    fetch('/downloadList', options)
 }
