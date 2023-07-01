@@ -39,3 +39,7 @@ window.onclick = event => {
         console.log("It is not an item:", target);
     }
 }
+
+function downloadList(){
+    
+}

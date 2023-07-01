@@ -9,6 +9,8 @@ let btn_create = $(".btn-create")
 let input_create_new_list = document.querySelector('.input-new-list')
 let input_add_item_to_list = document.querySelector('.input-item-to-list')
 let page_header_list_name = document.querySelector('.page-header-list-name')
+let item_list = document.querySelectorAll('.item-list')
+
 
 //hide elements
 let nav_list_group = $(".nav-list-group")
@@ -34,36 +36,15 @@ btn_create[0].addEventListener('click', function(){
     getWriteDownElement(input_create_new_list.value)
 })
 
-/*
-//select the Add item to the list button
-btn_add[0].addEventListener('click', function(){
-    //input text
-    const input_add_item_text = input_add_item_to_list.value
-    console.log(" item text: ", input_add_item_text)
-    //list name
-    const list_name = page_header_list_name
-    console.log("page header list name: ",list_name.textContent )
-})
-
-
-
-
-
-//select the delete button
-btn_delete.forEach(btnDelete => {
-    btnDelete.addEventListener('click', event => {
-        console.log('btn_deleted event: ', event)
-        const elementSelectedList = event.target.previousElementSibling
-        console.log('elementSelectedList: ', elementSelectedList)
-        const textElementSelectedList = elementSelectedList.textContent
-        console.log('textElementSelectedList: ', textElementSelectedList)
-        const getNameList = page_header_list_name.textContent
-        console.log('TextListName: ',getNameList)
-    })
-})
 
 //select the Download List button
 btn_download_list[0].addEventListener('click', function(){
-    console.log('btn_download_list clicked')
+    const itemsArray = []
+    let listName = document.querySelector(".page-header-list-name").textContent
+    for(let i = 0; i <= item_list.length-1 ; i++){
+        itemsArray.push(item_list[i].textContent)
+    }
+    console.log("the array: ", itemsArray)
+    console.log("the list name: ", listName)
+
 })
-*/
