@@ -41,6 +41,18 @@ window.onclick = event => {
 }
 
 function downloadList(list, items){
-    console.log("the list name: ", list)
-    console.log("the array: ", items)
+    const file = new File(items, list+ '.text', {
+        type: 'text/plain',
+    })
+    
+    const link = document.createElement('a')
+    const url = URL.createObjectURL(file)
+
+    link.href = url
+    link.download = file.name
+    document.body.appendChild(link)
+    link.click()
+
+    document.body.removeChild(link)
+    window.URL.revokeObjectURL(url)
 }

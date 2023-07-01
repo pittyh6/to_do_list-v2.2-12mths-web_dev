@@ -42,7 +42,7 @@ btn_download_list[0].addEventListener('click', function(){
     const itemsArray = []
     let listName = document.querySelector(".page-header-list-name").textContent
     for(let i = 0; i <= item_list.length-1 ; i++){
-        itemsArray.push(item_list[i].textContent)
+        itemsArray.push(item_list[i].textContent + '\n')
     }
     downloadList(listName, itemsArray)
 })
