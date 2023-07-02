@@ -18,7 +18,7 @@ import List from './model/List.js'
 
 //create new listdb
 const todoList = new List({
-    name_list: 'Study',
+    name_list: 'To do list',
     items: [
         'Write English', 'Grammar', 'Reading book',
     ]
