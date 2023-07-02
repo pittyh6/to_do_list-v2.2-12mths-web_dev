@@ -165,19 +165,6 @@ app.post("/downloadList", async (request, response) => {
     const listName = request.body.list
     console.log("list name get: ", listName)
 
-    /*
-    const downloadList = List.findOne({name_list: listName}).then(foundList => {
-        console.log("founded: ", foundList)
-        //const items = foundList.items
-        console.log("items: ", foundList.items)
-        return foundList.items
-    })
-
-    response.json({
-        status: "success",
-        listItems: downloadList
-    })
-    */
    try{
     const foundList = await List.findOne({name_list: listName}).exec()
     console.log("found list: ", foundList)

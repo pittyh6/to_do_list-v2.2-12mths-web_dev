@@ -79,8 +79,11 @@ async function downloadList(list) {
     const response = await fetch('/downloadList', options)
     const jsonData = await response.json()
     console.log("the async date jason: ", jsonData)
-       
-    const file = new File(jsonData.listItems, list + '.text', {
+    console.log("the async date jason listItems: ", jsonData.listItems)
+    
+    const items = jsonData.listItems.join("\n")
+
+    const file = new File([items], list + '.text', {
         type: 'text/plain',
     })
 
@@ -90,6 +93,7 @@ async function downloadList(list) {
     link.href = url
     link.download = file.name
     document.body.appendChild(link)
+
     link.click()
 
     document.body.removeChild(link)
