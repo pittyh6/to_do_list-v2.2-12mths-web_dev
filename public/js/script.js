@@ -40,9 +40,32 @@ window.onclick = event => {
     }
 }
 
-function downloadList(list) {
+/*
+//download list using html file
+function downloadList(list, items) {
+    console.log("the list name: ", list)
+    console.log("the array: ", items)
+    const file = new File(items, list + '.text', {
+        type: 'text/plain',
+    })
+
+    const link = document.createElement('a')
+    const url = URL.createObjectURL(file)
+
+    link.href = url
+    link.download = file.name
+    document.body.appendChild(link)
+    link.click()
+
+    document.body.removeChild(link)
+    window.URL.revokeObjectURL(url)
+}
+*/
+
+//Download list using mongoose
+async function downloadList(list) {
     console.log("Download list name: ", list)
-    const data = {list}
+    const data = { list }
     console.log("data object: ", data)
 
     const options = {
@@ -53,5 +76,10 @@ function downloadList(list) {
         },
         body: JSON.stringify(data)
     }
-    fetch('/downloadList', options)
+    const response = await fetch('/downloadList', options)
+    const jsonData = await response.json()
+    console.log("the async date jason: ", jsonData)
+       /* .then(response => {
+            console.log("then get data from app.js: ", response)
+        })*/
 }

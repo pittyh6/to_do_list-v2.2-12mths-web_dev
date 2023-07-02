@@ -160,8 +160,41 @@ app.post("/deleteList", async function(req,res){
     }
 })
 
-app.post("/downloadList", (request, response) => {
+app.post("/downloadList", async (request, response) => {
     console.log("request", request.body)
+    const listName = request.body.list
+    console.log("list name get: ", listName)
+
+    /*
+    const downloadList = List.findOne({name_list: listName}).then(foundList => {
+        console.log("founded: ", foundList)
+        //const items = foundList.items
+        console.log("items: ", foundList.items)
+        return foundList.items
+    })
+
+    response.json({
+        status: "success",
+        listItems: downloadList
+    })
+    */
+   try{
+    const foundList = await List.findOne({name_list: listName}).exec()
+    console.log("found list: ", foundList)
+    const item = foundList ? foundList.items : []
+    console.log("items founded: ", item)
+    response.json({
+        status: "success",
+        listItems: item
+    })
+   }catch(error){
+    console.log("Error: ", error)
+    response.status(500).json({
+        status: "error",
+        message: "Failed to retrieve the list name"
+    })
+   }
+    
 })
 
 
