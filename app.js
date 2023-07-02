@@ -59,31 +59,62 @@ app.get('/', function (req, res) {
 app.get('/:customListName', function (req, res) {
     const customListNameClicked = req.params.customListName
 
+    // changes
+    if (customListNameClicked === 'favicon.ico') {
+        return res.sendStatus(204); // Send a No Content response for favicon.ico requests
+    }
     List.findOne({ name_list: customListNameClicked }).then(foundList => {
-        if (customListNameClicked === 'favicon.ico') {
-            return res.sendStatus(204); // Send a No Content response for favicon.ico requests
-        } if (!foundList) {
+        if (!foundList) {
             console.log('no list found', customListNameClicked)
             //creating new list passing the name on the input
             const newListCreating = new List({
                 name_list: customListNameClicked,
                 items: [],
             });
-            newListCreating.save()
+            return newListCreating.save()
         } else {
-            List.find({}).exec().then(findAll => {
-                res.render("pages/index.ejs", { listName: foundList.name_list, newListItem: foundList.items, findAll })
-            })
+            return foundList
         }
-        //to show all the new information on db mongoose
-        List.find({}).exec().then(findAll => {
-            console.log("findALl inside the new list created: ", findAll)
-            res.render("pages/index.ejs", { listName: findAll[0].name_list, newListItem: findAll[0].items, findAll })
-        })
+    }).then(newList => {
+        return List.find({}).exec()
+            .then(findAll => {
+                console.log("findALl inside the new list created: ", findAll)
+                res.render("pages/index.ejs", {listName: newList.name_list, newListItem: newList.items, findAll})
+            })
             .catch(error => {
                 console.log("Error retrieving documents: ", error)
+                res.sendStatus(500);
             })
     })
+    //end changes
+
+    /*
+    //creating Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client.. to many res.render 
+    List.findOne({ name_list: customListNameClicked }).then(foundList => {
+         if (customListNameClicked === 'favicon.ico') {
+             return res.sendStatus(204); // Send a No Content response for favicon.ico requests
+         } if (!foundList) {
+             console.log('no list found', customListNameClicked)
+             //creating new list passing the name on the input
+             const newListCreating = new List({
+                 name_list: customListNameClicked,
+                 items: [],
+             });
+             newListCreating.save()
+         } else {
+             List.find({}).exec().then(findAll => {
+                 res.render("pages/index.ejs", { listName: foundList.name_list, newListItem: foundList.items, findAll })
+             })
+         }
+         //to show all the new information on db mongoose
+         List.find({}).exec().then(findAll => {
+             console.log("findALl inside the new list created: ", findAll)
+             res.render("pages/index.ejs", { listName: findAll[0].name_list, newListItem: findAll[0].items, findAll })
+         })
+             .catch(error => {
+                 console.log("Error retrieving documents: ", error)
+             })
+     })*/
 
 })
 
@@ -117,7 +148,7 @@ app.post("/deleteItem", async function (req, res) {
     const listName = req.body.list
     console.log("List of item to be deleted: ", listName)
     console.log("Item deleted: ", itemName)
-    
+
     try {
         const updateList = await List.findOneAndUpdate(
             { name_list: listName },
@@ -132,28 +163,29 @@ app.post("/deleteItem", async function (req, res) {
         res.redirect("/" + listName)
     } catch (error) {
         console.log("Error deleting item: ", error)
-        res.redirect("/")
-        return res.sendStatus(500)
+        //res.redirect("/")
+        //return res.sendStatus(500)
+        return res.status(500).send("Failed to delete item.")
     }
 })
 
 //delete list -> delete list selecting on the navbar
-app.post("/deleteList", async function(req,res){
+app.post("/deleteList", async function (req, res) {
     const listName = req.body.list
     console.log("list name to delete on nav: ", listName)
-    try{
+    try {
         const deleteList = await List.deleteOne(
-            {name_list: listName},
-            {$pull: {name_list: listName}},
-            {new: true}
+            { name_list: listName },
+            { $pull: { name_list: listName } },
+            { new: true }
         ).exec()
-        if(!deleteList){
+        if (!deleteList) {
             console.log("List not found: ", listName)
             return res.sendStatus(404)
         }
         console.log("Deleted list: ", deleteList)
         res.redirect("/")
-    }catch(error){
+    } catch (error) {
         console.log("Error deleting list: ", error)
         res.redirect("/")
         return res.sendStatus(500)
@@ -165,23 +197,23 @@ app.post("/downloadList", async (request, response) => {
     const listName = request.body.list
     console.log("list name get: ", listName)
 
-   try{
-    const foundList = await List.findOne({name_list: listName}).exec()
-    console.log("found list: ", foundList)
-    const item = foundList ? foundList.items : []
-    console.log("items founded: ", item)
-    response.json({
-        status: "success",
-        listItems: item
-    })
-   }catch(error){
-    console.log("Error: ", error)
-    response.status(500).json({
-        status: "error",
-        message: "Failed to retrieve the list name"
-    })
-   }
-    
+    try {
+        const foundList = await List.findOne({ name_list: listName }).exec()
+        console.log("found list: ", foundList)
+        const item = foundList ? foundList.items : []
+        console.log("items founded: ", item)
+        response.json({
+            status: "success",
+            listItems: item
+        })
+    } catch (error) {
+        console.log("Error: ", error)
+        response.status(500).json({
+            status: "error",
+            message: "Failed to retrieve the list name"
+        })
+    }
+
 })
 
 
