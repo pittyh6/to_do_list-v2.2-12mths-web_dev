@@ -85,9 +85,9 @@ import { name } from "ejs"
 
 
 TO DO 
-delete item - return erro db
-Add item - return erro db
-Select list froom nav bar - return err db
+delete item - return erro db = fixed
+Add item - return erro db = fixed
+Select list froom nav bar - return err db = fixed
 
 ok
 Download list = OK
