@@ -11,9 +11,9 @@
  -->
 
 ## Project description
-It is a To Do List.
+- It is a To Do List.
 
-* What can you do with it?
+What can you do with it?
 - Create new lists
 - Delete list
 - Add tasks to the selected list
