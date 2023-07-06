@@ -93,3 +93,7 @@ ok
 Download list = OK
 create list = OK
 delete list from navbar = OK
+
+To fix
+create tasks empty
+when delete a task, it is unchecking the tasks done
