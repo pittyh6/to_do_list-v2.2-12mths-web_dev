@@ -5,11 +5,25 @@
 
 ![Begin Banner](/Documentation/top-1200x350.gif)
 
+<!--
 ### Ninth  Month / Sprint() 
 * Online courses, challenges and creation of my own projects.
+ -->
 
+## Project description
+It is a To Do List.
 
 ## What I learned/used (Link for details)
+- HTML
+- CSS 
+- Responsive design
+- JavaScript
+- express.js
+- node.js
+- ejs
+- mongodb
+- mongoose
+
   
 <!-- 
 * JavaScript [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedJAVASCRIPT.md)
@@ -32,12 +46,15 @@
 <!-- ## Final projects + Result 
  * 🎯 Certification Project - Survey Form [link](https://github.com/pittyh6/freeCodeCamp-responsive_web_design-3-12Mths-WebDevStudy-2022-2023/tree/master/survey_form) 🥇 -->
 
-## Online Page:
+<!-- ## Online Page: -->
 
  ## Project + Result 
 * prototype: https://www.figma.com/file/W4DjpEHYoMOuGiuIN27EDs/ToDoList?node-id=0%3A1&t=4iM9VxWkiv0pakER-1
 
-* Mobile/Tablet Verison 
+* Mobile Verison 
+![Begin Banner](/Documentation/mobile.gif)
+
+* Tablet Version 
 ![Begin Banner](/Documentation/mobile.gif)
 
 * Desktop Version:
