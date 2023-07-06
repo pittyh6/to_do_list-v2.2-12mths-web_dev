@@ -13,6 +13,12 @@
 ## Project description
 It is a To Do List.
 
+* What can you do with it?
+- Create new lists
+- Delete list
+- Add tasks to the selected list
+- Delete task
+- Download List.
 ## What I learned/used (Link for details)
 - HTML
 - CSS 
