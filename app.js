@@ -86,35 +86,6 @@ app.get('/:customListName', function (req, res) {
                 res.sendStatus(500);
             })
     })
-    //end changes
-
-    /*
-    //creating Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client.. to many res.render 
-    List.findOne({ name_list: customListNameClicked }).then(foundList => {
-         if (customListNameClicked === 'favicon.ico') {
-             return res.sendStatus(204); // Send a No Content response for favicon.ico requests
-         } if (!foundList) {
-             console.log('no list found', customListNameClicked)
-             //creating new list passing the name on the input
-             const newListCreating = new List({
-                 name_list: customListNameClicked,
-                 items: [],
-             });
-             newListCreating.save()
-         } else {
-             List.find({}).exec().then(findAll => {
-                 res.render("pages/index.ejs", { listName: foundList.name_list, newListItem: foundList.items, findAll })
-             })
-         }
-         //to show all the new information on db mongoose
-         List.find({}).exec().then(findAll => {
-             console.log("findALl inside the new list created: ", findAll)
-             res.render("pages/index.ejs", { listName: findAll[0].name_list, newListItem: findAll[0].items, findAll })
-         })
-             .catch(error => {
-                 console.log("Error retrieving documents: ", error)
-             })
-     })*/
 
 })
 
@@ -127,7 +98,13 @@ app.post("/", function (req, res) {
         if (!foundList) {
             console.log("List not found: ", listName)
             return res.sendStatus(404)
-        }
+        } 
+        /*
+        // I want to live the option to create a empty task, case the person wants a empty space between task. It is not a error.
+        if(itemName === "" || itemName === " "){
+            console.log("item empty: ", itemName)
+            return listName;
+        }*/
         foundList.items.push(itemName)
         foundList.save().then(savedList => {
             console.log("Item added to list: ", savedList)
@@ -163,8 +140,6 @@ app.post("/deleteItem", async function (req, res) {
         res.redirect("/" + listName)
     } catch (error) {
         console.log("Error deleting item: ", error)
-        //res.redirect("/")
-        //return res.sendStatus(500)
         return res.status(500).send("Failed to delete item.")
     }
 })
