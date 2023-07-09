@@ -95,5 +95,5 @@ create list = OK
 delete list from navbar = OK
 
 To fix
-create tasks empty
+create tasks empty -> done. I want to be able to create a empty one.
 when delete a task, it is unchecking the tasks done
