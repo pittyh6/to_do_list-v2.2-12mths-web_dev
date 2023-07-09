@@ -57,14 +57,15 @@ What can you do with it?
  ## Project + Result 
 * prototype: https://www.figma.com/file/W4DjpEHYoMOuGiuIN27EDs/ToDoList?node-id=0%3A1&t=4iM9VxWkiv0pakER-1
 
-* Mobile Verison 
-![Begin Banner](/Documentation/mobile.gif)
-
-* Tablet Version 
-![Begin Banner](/Documentation/mobile.gif)
-
 * Desktop Version:
 ![Begin Banner](/Documentation/desktop.gif)
+
+* Tablet Version 
+![Begin Banner](/Documentation/tablet.gif)
+
+
+* Mobile Verison 
+![Begin Banner](/Documentation/mobile.gif)
 
 
 ## Previous Projects
