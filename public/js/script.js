@@ -36,7 +36,7 @@ window.onclick = event => {
         target.classList.remove("done-task");
         target.classList.add("undone-task");
     } else {
-        console.log("It is not an item:", target);
+        //console.log("It is not an item:", target);
     }
 }
 

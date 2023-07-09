@@ -32,7 +32,6 @@ nav_lists[0].addEventListener("click",function(){
 
 //select the Create List button 
 btn_create[0].addEventListener('click', function(){
-    console.log("create new list button clicked")
     getWriteDownElement(input_create_new_list.value)
 })
 
