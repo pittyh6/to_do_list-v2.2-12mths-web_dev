@@ -55,8 +55,9 @@ What can you do with it?
 <!-- ## Online Page: -->
 
  ## Project + Result 
+ <!-- 
 * prototype: https://www.figma.com/file/W4DjpEHYoMOuGiuIN27EDs/ToDoList?node-id=0%3A1&t=4iM9VxWkiv0pakER-1
-
+-->
 * Desktop Version:
 ![Begin Banner](/Documentation/desktop.gif)
 
