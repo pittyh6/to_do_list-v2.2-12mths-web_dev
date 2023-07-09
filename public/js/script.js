@@ -64,9 +64,7 @@ function downloadList(list, items) {
 
 //Download list using mongoose
 async function downloadList(list) {
-    console.log("Download list name: ", list)
     const data = { list }
-    console.log("data object: ", data)
 
     const options = {
         method: 'POST',
@@ -78,8 +76,6 @@ async function downloadList(list) {
     }
     const response = await fetch('/downloadList', options)
     const jsonData = await response.json()
-    console.log("the async date jason: ", jsonData)
-    console.log("the async date jason listItems: ", jsonData.listItems)
     
     const items = jsonData.listItems.join("\n")
 
