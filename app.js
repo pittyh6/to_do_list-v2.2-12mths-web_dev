@@ -65,7 +65,6 @@ app.get('/:customListName', function (req, res) {
     }
     List.findOne({ name_list: customListNameClicked }).then(foundList => {
         if (!foundList) {
-            console.log('no list found', customListNameClicked)
             //creating new list passing the name on the input
             const newListCreating = new List({
                 name_list: customListNameClicked,
@@ -78,7 +77,6 @@ app.get('/:customListName', function (req, res) {
     }).then(newList => {
         return List.find({}).exec()
             .then(findAll => {
-                console.log("findALl inside the new list created: ", findAll)
                 res.render("pages/index.ejs", {listName: newList.name_list, newListItem: newList.items, findAll})
             })
             .catch(error => {
@@ -94,7 +92,6 @@ app.post("/", function (req, res) {
     const itemName = req.body.newItem
     const listName = req.body.list
     List.findOne({ name_list: listName }).then(foundList => {
-        console.log("founded list post: ", foundList)
         if (!foundList) {
             console.log("List not found: ", listName)
             return res.sendStatus(404)
@@ -123,8 +120,6 @@ app.post("/", function (req, res) {
 app.post("/deleteItem", async function (req, res) {
     const itemName = req.body.itemList
     const listName = req.body.list
-    console.log("List of item to be deleted: ", listName)
-    console.log("Item deleted: ", itemName)
 
     try {
         const updateList = await List.findOneAndUpdate(
@@ -147,7 +142,6 @@ app.post("/deleteItem", async function (req, res) {
 //delete list -> delete list selecting on the navbar
 app.post("/deleteList", async function (req, res) {
     const listName = req.body.list
-    console.log("list name to delete on nav: ", listName)
     try {
         const deleteList = await List.deleteOne(
             { name_list: listName },
@@ -168,15 +162,11 @@ app.post("/deleteList", async function (req, res) {
 })
 
 app.post("/downloadList", async (request, response) => {
-    console.log("request", request.body)
     const listName = request.body.list
-    console.log("list name get: ", listName)
 
     try {
         const foundList = await List.findOne({ name_list: listName }).exec()
-        console.log("found list: ", foundList)
         const item = foundList ? foundList.items : []
-        console.log("items founded: ", item)
         response.json({
             status: "success",
             listItems: item
