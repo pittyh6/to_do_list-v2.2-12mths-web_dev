@@ -11,6 +11,7 @@ function hide_show(elementClicked) {
 
 // to get the element which contains an specific class passed by parameter
 function getClickedElementPage(elementSelectedPage) {
+    
     window.onclick = e => {
         textElementClicked = e.target.innerText
         if ($(e.target).hasClass(elementSelectedPage) == true) {
@@ -23,6 +24,7 @@ function getClickedElementPage(elementSelectedPage) {
     }
 }
 function getWriteDownElement(fieldInputText) {
+    
     window.location.href = "http://localhost:3000/" + fieldInputText
     return fieldInputText
 }
